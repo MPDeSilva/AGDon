@@ -1,0 +1,1069 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VG Don Services — Theme Studio</title>
+<style>
+/* ─── Reset ─── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--vg-font-body, system-ui, sans-serif);
+  background: var(--vg-bg, #F3E9D7);
+  color: var(--vg-ink, #2E2620);
+  transition: background 0.3s, color 0.3s;
+  line-height: 1.6;
+}
+img { max-width: 100%; }
+a { color: inherit; }
+
+/* ─── Theme tokens (warm-bronze default) ─── */
+:root {
+  --vg-bg: #F3E9D7;
+  --vg-surface: #FDF6EC;
+  --vg-surface-2: #EAD9BF;
+  --vg-ink: #2E2620;
+  --vg-ink-soft: #5C4A3A;
+  --vg-muted: #8C7460;
+  --vg-line: #DDD0B8;
+  --vg-brand: #9A6A3C;
+  --vg-brand-press: #7A5230;
+  --vg-accent: #B8854F;
+  --vg-on-brand: #FFFFFF;
+  --vg-on-accent: #FFFFFF;
+  --vg-cta-bg: #9A6A3C;
+  --vg-cta-ink: #FFFFFF;
+  --vg-hero-bg: #F3E9D7;
+  --vg-hero-ink: #2E2620;
+  --vg-hero-eyebrow: #9A6A3C;
+  --vg-hero-accent: #B8854F;
+  --vg-bar-bg: #2E2620;
+  --vg-bar-ink: #F3E9D7;
+  --vg-frame-back: #B8854F;
+  --vg-frame-radius: 24px;
+  --vg-font-display: 'Lora', Georgia, serif;
+  --vg-font-body: 'Inter', system-ui, sans-serif;
+  --vg-radius: 12px;
+  --vg-radius-sm: 6px;
+  --vg-radius-btn: 13px;
+  --vg-shadow: 0 4px 24px rgba(46,38,32,0.10);
+  --vg-shadow-sm: 0 2px 8px rgba(46,38,32,0.07);
+  --vg-display-spacing: -0.02em;
+  --vg-h1-weight: 600;
+  --vg-success: #16a34a;
+  --vg-error: #dc2626;
+}
+
+/* ─── Google Fonts import (loaded dynamically) ─── */
+
+/* ─── Typography helpers ─── */
+.font-display { font-family: var(--vg-font-display); }
+.font-body { font-family: var(--vg-font-body); }
+
+/* ─── Topbar ─── */
+.topbar {
+  background: var(--vg-bar-bg);
+  color: var(--vg-bar-ink);
+  padding: 8px 16px;
+  text-align: center;
+  font-size: 13px;
+  transition: background 0.3s, color 0.3s;
+}
+.topbar a { font-weight: 600; text-decoration: underline; margin-left: 10px; opacity: 0.9; }
+
+/* ─── Header ─── */
+.site-header {
+  background: var(--vg-surface);
+  border-bottom: 1px solid var(--vg-line);
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+  transition: background 0.3s, border-color 0.3s;
+}
+.logo-name {
+  font-family: var(--vg-font-display);
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--vg-ink);
+  letter-spacing: var(--vg-display-spacing);
+}
+.logo-sub { font-size: 11px; color: var(--vg-muted); }
+.nav-links { display: flex; gap: 24px; }
+.nav-links a { font-size: 14px; font-weight: 500; color: var(--vg-ink-soft); text-decoration: none; transition: color 0.15s; }
+.nav-links a:hover { color: var(--vg-brand); }
+.btn-cta {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 18px;
+  font-size: 14px;
+  font-weight: 600;
+  background: var(--vg-cta-bg);
+  color: var(--vg-cta-ink);
+  border-radius: var(--vg-radius-btn);
+  text-decoration: none;
+  transition: opacity 0.15s, background 0.3s;
+  border: none;
+  cursor: pointer;
+}
+.btn-cta:hover { opacity: 0.88; }
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 22px;
+  font-size: 15px;
+  font-weight: 600;
+  background: transparent;
+  color: var(--vg-hero-ink);
+  border: 2px solid var(--vg-hero-ink);
+  border-radius: var(--vg-radius-btn);
+  text-decoration: none;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+.btn-ghost:hover { opacity: 0.75; }
+
+/* ─── Hero ─── */
+.hero {
+  background: var(--vg-hero-bg);
+  color: var(--vg-hero-ink);
+  padding: 80px 24px;
+  transition: background 0.3s, color 0.3s;
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+}
+.hero-inner { max-width: 700px; }
+.eyebrow {
+  display: inline-block;
+  background: var(--vg-hero-eyebrow);
+  color: var(--vg-on-brand);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: var(--vg-radius-btn);
+  margin-bottom: 20px;
+  transition: background 0.3s;
+}
+.hero h1 {
+  font-family: var(--vg-font-display);
+  font-size: clamp(2.8rem, 6vw, 4.5rem);
+  font-weight: var(--vg-h1-weight, 600);
+  line-height: 1.1;
+  letter-spacing: var(--vg-display-spacing);
+  margin-bottom: 20px;
+}
+.hero h1 .accent { color: var(--vg-hero-accent, var(--vg-accent)); }
+.hero-lead { font-size: 18px; opacity: 0.9; max-width: 560px; margin-bottom: 32px; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 28px; }
+.chip {
+  font-size: 13px; font-weight: 500;
+  padding: 5px 12px;
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: var(--vg-radius-btn);
+}
+.hero-ctas { display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 28px; }
+.btn-primary {
+  display: inline-flex; align-items: center;
+  padding: 12px 24px; font-size: 15px; font-weight: 600;
+  background: var(--vg-cta-bg); color: var(--vg-cta-ink);
+  border-radius: var(--vg-radius-btn);
+  text-decoration: none; border: none; cursor: pointer;
+  transition: opacity 0.15s, background 0.3s;
+}
+.btn-primary:hover { opacity: 0.88; }
+.trust-cards { display: flex; flex-wrap: wrap; gap: 10px; }
+.trust-card {
+  font-size: 13px; font-weight: 500;
+  padding: 8px 14px;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: var(--vg-radius);
+}
+
+/* ─── Trust bar ─── */
+.trust-bar {
+  background: var(--vg-surface);
+  border-bottom: 1px solid var(--vg-line);
+  padding: 24px;
+  transition: background 0.3s;
+}
+.trust-bar-label {
+  font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--vg-muted); text-align: center; margin-bottom: 16px;
+}
+.trust-bar-row {
+  display: flex; flex-wrap: wrap; align-items: center;
+  justify-content: center; gap: 24px;
+}
+.trust-badge {
+  display: flex; align-items: center; gap: 6px;
+  font-size: 13px; font-weight: 600; color: var(--vg-ink);
+}
+.software-pill {
+  font-size: 12px; font-weight: 500;
+  padding: 4px 10px;
+  background: var(--vg-surface-2);
+  color: var(--vg-ink-soft);
+  border-radius: var(--vg-radius-sm);
+  transition: background 0.3s;
+}
+
+/* ─── Sections ─── */
+.section { padding: 80px 24px; }
+.section-alt { background: var(--vg-surface); transition: background 0.3s; }
+.section-brand {
+  background: var(--vg-bar-bg);
+  color: var(--vg-bar-ink);
+  transition: background 0.3s, color 0.3s;
+}
+.container { max-width: 1100px; margin: 0 auto; }
+.section-eyebrow {
+  font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--vg-brand); margin-bottom: 12px;
+  transition: color 0.3s;
+}
+.section-brand .section-eyebrow { color: var(--vg-bar-ink); opacity: 0.7; }
+.section-heading {
+  font-family: var(--vg-font-display);
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  font-weight: var(--vg-h1-weight);
+  letter-spacing: var(--vg-display-spacing);
+  color: var(--vg-ink);
+  line-height: 1.2;
+  margin-bottom: 12px;
+  transition: color 0.3s;
+}
+.section-brand .section-heading { color: var(--vg-bar-ink); }
+.section-lead { font-size: 17px; color: var(--vg-ink-soft); max-width: 640px; margin-bottom: 48px; transition: color 0.3s; }
+.section-brand .section-lead { color: var(--vg-bar-ink); opacity: 0.85; }
+
+/* ─── About ─── */
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+.about-image-wrap { position: relative; }
+.about-image {
+  width: 100%; max-width: 340px; aspect-ratio: 3/4;
+  background: var(--vg-surface-2);
+  border-radius: var(--vg-frame-radius);
+  display: flex; align-items: center; justify-content: center;
+  position: relative; z-index: 1;
+  transition: background 0.3s;
+}
+.about-image-back {
+  position: absolute; top: 24px; left: -24px;
+  width: 100%; max-width: 340px; aspect-ratio: 3/4;
+  background: var(--vg-surface-2); opacity: 0.5;
+  border-radius: var(--vg-frame-radius);
+  z-index: 0;
+  transition: background 0.3s;
+}
+.avatar {
+  width: 96px; height: 96px;
+  border-radius: 50%;
+  background: var(--vg-frame-back);
+  color: var(--vg-on-brand);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--vg-font-display);
+  font-size: 28px; font-weight: bold;
+  transition: background 0.3s;
+}
+.about-body { font-size: 15px; color: var(--vg-ink-soft); line-height: 1.7; }
+.about-body p { margin-bottom: 14px; }
+.about-cred { font-size: 13px; font-weight: 600; color: var(--vg-brand); margin-top: 20px; transition: color 0.3s; }
+.about-loc { font-size: 13px; color: var(--vg-muted); }
+
+/* ─── Services grid ─── */
+.services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.service-card {
+  padding: 24px;
+  background: var(--vg-bg);
+  border: 1px solid var(--vg-line);
+  border-radius: var(--vg-radius);
+  box-shadow: var(--vg-shadow-sm);
+  display: flex; flex-direction: column; gap: 12px;
+  transition: background 0.3s, border-color 0.3s, box-shadow 0.15s;
+}
+.service-card:hover { box-shadow: var(--vg-shadow); }
+.service-card-last { background: var(--vg-surface-2); }
+.service-icon { font-size: 28px; }
+.service-title {
+  font-family: var(--vg-font-display); font-size: 16px; font-weight: 600;
+  color: var(--vg-ink); transition: color 0.3s;
+}
+.service-desc { font-size: 13px; line-height: 1.6; color: var(--vg-ink-soft); transition: color 0.3s; }
+.service-audience {
+  display: inline-block; font-size: 11px; font-weight: 600;
+  padding: 3px 10px;
+  background: var(--vg-surface); color: var(--vg-brand);
+  border: 1px solid var(--vg-line);
+  border-radius: var(--vg-radius-sm);
+  transition: background 0.3s, color 0.3s;
+}
+.service-link { font-size: 13px; font-weight: 600; color: var(--vg-brand); text-decoration: underline; transition: color 0.3s; }
+
+/* ─── Why Me pillars ─── */
+.pillars-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.pillar {
+  padding: 24px;
+  background: var(--vg-surface);
+  border: 1px solid var(--vg-line);
+  border-radius: var(--vg-radius);
+  transition: background 0.3s, border-color 0.3s;
+}
+.pillar-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; }
+.pillar-icon { font-size: 22px; }
+.pillar-num { font-size: 28px; font-weight: 700; opacity: 0.12; color: var(--vg-brand); font-family: var(--vg-font-display); transition: color 0.3s; }
+.pillar-title { font-family: var(--vg-font-display); font-size: 15px; font-weight: 600; color: var(--vg-ink); margin-bottom: 8px; transition: color 0.3s; }
+.pillar-body { font-size: 13px; color: var(--vg-ink-soft); line-height: 1.6; transition: color 0.3s; }
+
+/* ─── Process steps ─── */
+.process-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; margin-bottom: 40px; }
+.step { text-align: center; position: relative; }
+.step-icon {
+  width: 64px; height: 64px; border-radius: 50%;
+  background: var(--vg-brand); color: var(--vg-on-brand);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 24px; margin: 0 auto 16px;
+  position: relative; z-index: 1;
+  transition: background 0.3s;
+}
+.step-badge {
+  position: absolute; top: 0; right: calc(50% - 34px);
+  width: 20px; height: 20px; border-radius: 50%;
+  background: var(--vg-accent); color: var(--vg-on-accent);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 10px; font-weight: 700; z-index: 2;
+  transition: background 0.3s;
+}
+.step-title { font-family: var(--vg-font-display); font-size: 16px; font-weight: 600; color: var(--vg-ink); margin-bottom: 8px; transition: color 0.3s; }
+.step-body { font-size: 13px; color: var(--vg-ink-soft); transition: color 0.3s; }
+
+/* ─── FAQ ─── */
+.faq-list { display: flex; flex-direction: column; gap: 10px; }
+.faq-item {
+  background: var(--vg-surface);
+  border: 1px solid var(--vg-line);
+  border-radius: var(--vg-radius);
+  overflow: hidden;
+  transition: background 0.3s, border-color 0.3s;
+}
+.faq-item.open { border-color: var(--vg-brand); }
+.faq-q {
+  display: flex; justify-content: space-between; align-items: center; gap: 12px;
+  padding: 16px 24px; font-weight: 500; font-size: 15px; cursor: pointer;
+  color: var(--vg-ink); background: none; border: none; width: 100%; text-align: left;
+  transition: color 0.15s;
+}
+.faq-q:hover { color: var(--vg-brand); }
+.faq-chevron { color: var(--vg-brand); transition: transform 0.2s, color 0.3s; flex-shrink: 0; }
+.faq-item.open .faq-chevron { transform: rotate(180deg); }
+.faq-a { display: none; padding: 0 24px 18px; font-size: 14px; line-height: 1.7; color: var(--vg-ink-soft); transition: color 0.3s; }
+.faq-item.open .faq-a { display: block; }
+
+/* ─── Contact ─── */
+.contact-grid { display: grid; grid-template-columns: 2fr 3fr; gap: 48px; }
+.contact-details { display: flex; flex-direction: column; gap: 16px; margin-top: 28px; }
+.contact-row { display: flex; align-items: center; gap: 10px; font-size: 14px; }
+.contact-row a { color: var(--vg-brand); text-decoration: underline; transition: color 0.3s; }
+.form-wrap {
+  background: var(--vg-bg);
+  border: 1px solid var(--vg-line);
+  border-radius: var(--vg-radius);
+  padding: 28px;
+  transition: background 0.3s, border-color 0.3s;
+}
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.form-group { margin-bottom: 16px; }
+.form-label { display: block; font-size: 13px; font-weight: 500; color: var(--vg-ink); margin-bottom: 5px; transition: color 0.3s; }
+.form-label .req { color: var(--vg-error); margin-left: 2px; }
+.form-input, .form-select, .form-textarea {
+  width: 100%; padding: 9px 12px; font-size: 14px;
+  border: 1px solid var(--vg-line);
+  border-radius: var(--vg-radius-sm);
+  background: var(--vg-surface); color: var(--vg-ink);
+  font-family: var(--vg-font-body);
+  transition: border-color 0.15s, background 0.3s;
+  outline: none;
+}
+.form-input:focus, .form-select:focus, .form-textarea:focus { border-color: var(--vg-brand); }
+.form-textarea { resize: vertical; min-height: 90px; }
+.form-checkboxes { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+.form-check { display: flex; align-items: center; gap: 7px; font-size: 13px; color: var(--vg-ink-soft); padding: 5px; }
+.form-check input { accent-color: var(--vg-brand); }
+.form-consent { display: flex; align-items: flex-start; gap: 8px; font-size: 13px; color: var(--vg-ink-soft); margin-bottom: 16px; }
+.form-consent input { margin-top: 2px; accent-color: var(--vg-brand); flex-shrink: 0; }
+.turnstile-placeholder {
+  padding: 10px 12px; font-size: 12px; color: var(--vg-muted); text-align: center;
+  background: var(--vg-surface-2); border-radius: var(--vg-radius-sm); margin-bottom: 16px;
+  transition: background 0.3s;
+}
+
+/* ─── Footer ─── */
+.footer {
+  background: var(--vg-bar-bg);
+  color: var(--vg-bar-ink);
+  padding: 56px 24px 32px;
+  transition: background 0.3s, color 0.3s;
+}
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; max-width: 1100px; margin: 0 auto 40px; }
+.footer-brand-name { font-family: var(--vg-font-display); font-size: 22px; font-weight: bold; margin-bottom: 6px; }
+.footer-tagline { font-size: 13px; opacity: 0.75; margin-bottom: 4px; }
+.footer-disclaimer { font-size: 12px; opacity: 0.55; margin-top: 12px; }
+.footer-col-heading { font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; opacity: 0.55; margin-bottom: 12px; }
+.footer-links { display: flex; flex-direction: column; gap: 8px; font-size: 14px; }
+.footer-links a { opacity: 0.85; text-decoration: underline; transition: opacity 0.15s; }
+.footer-links a:hover { opacity: 0.6; }
+.footer-links span { opacity: 0.75; }
+.footer-copy { max-width: 1100px; margin: 0 auto; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.12); font-size: 12px; opacity: 0.55; text-align: center; }
+
+/* ─── Theme switcher dock ─── */
+#theme-dock {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  background: rgba(0,0,0,0.88);
+  backdrop-filter: blur(12px);
+  border-radius: 999px;
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.4);
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: calc(100vw - 32px);
+}
+#theme-dock .dock-label {
+  font-size: 11px; font-weight: 600; letter-spacing: 0.08em;
+  text-transform: uppercase; color: rgba(255,255,255,0.5); margin-right: 4px;
+  white-space: nowrap;
+}
+.theme-btn {
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: 1.5px solid rgba(255,255,255,0.2);
+  background: transparent;
+  color: rgba(255,255,255,0.75);
+  font-size: 12px; font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s;
+  white-space: nowrap;
+}
+.theme-btn:hover { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.5); color: #fff; }
+.theme-btn.active { background: #fff; color: #111; border-color: #fff; font-weight: 700; }
+.lang-btn {
+  padding: 5px 12px;
+  border-radius: 999px;
+  border: 1.5px solid rgba(255,255,255,0.15);
+  background: transparent;
+  color: rgba(255,255,255,0.55);
+  font-size: 12px; font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.lang-btn:hover { border-color: rgba(255,255,255,0.4); color: rgba(255,255,255,0.85); }
+.lang-btn.active { border-color: rgba(255,255,255,0.7); color: #fff; }
+.dock-sep { width: 1px; height: 20px; background: rgba(255,255,255,0.2); margin: 0 4px; }
+
+/* ─── Responsive ─── */
+@media (max-width: 900px) {
+  .about-grid, .contact-grid { grid-template-columns: 1fr; }
+  .services-grid, .pillars-grid { grid-template-columns: repeat(2, 1fr); }
+  .process-steps { grid-template-columns: 1fr; gap: 24px; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .nav-links { display: none; }
+}
+@media (max-width: 600px) {
+  .services-grid, .pillars-grid, .footer-grid { grid-template-columns: 1fr; }
+  .form-row, .form-checkboxes { grid-template-columns: 1fr; }
+  .hero h1 { font-size: 2.2rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════ TOPBAR ═══════════════════════════════════════ -->
+<div class="topbar">
+  <span id="tb-text">Fixed-fee accounting for freelancers &amp; small businesses</span>
+  <a href="#contact" id="tb-cta">Get in touch →</a>
+</div>
+
+<!-- ═══════════════════════════════════════ HEADER ══════════════════════════════════════ -->
+<header class="site-header">
+  <div>
+    <div class="logo-name">VG Don Services</div>
+    <div class="logo-sub">Chartered Accountant · London</div>
+  </div>
+  <nav class="nav-links">
+    <a href="#services" id="nav-services">Services</a>
+    <a href="#about" id="nav-about">About</a>
+    <a href="#why-me" id="nav-why">Why Me</a>
+    <a href="#how-it-works" id="nav-how">How It Works</a>
+    <a href="#faq" id="nav-faq">FAQ</a>
+  </nav>
+  <a href="#contact" class="btn-cta" id="nav-cta">Get a free quote</a>
+</header>
+
+<!-- ════════════════════════════════════════ HERO ══════════════════════════════════════ -->
+<section class="hero" id="hero">
+  <div class="hero-inner">
+    <div class="eyebrow" id="hero-eyebrow">London Chartered Accountant</div>
+    <h1>
+      <span id="hero-h1">Chartered expertise.</span><br>
+      <span class="accent" id="hero-h2">Freelance rates.</span>
+    </h1>
+    <p class="hero-lead" id="hero-lead">Friendly, fixed-fee accounting for freelancers, sole traders and small businesses across London — with a real person who actually picks up the phone.</p>
+    <div class="chips">
+      <span class="chip" id="chip1">Chartered Accountant</span>
+      <span class="chip" id="chip2">Fixed pricing</span>
+      <span class="chip" id="chip3">Local &amp; personal</span>
+    </div>
+    <div class="hero-ctas">
+      <a href="#contact" class="btn-primary" id="cta1">Get a free quote →</a>
+      <a href="#services" class="btn-ghost" id="cta2">See services</a>
+    </div>
+    <div class="trust-cards">
+      <div class="trust-card" id="trust1">Self-Assessment filed ✓</div>
+      <div class="trust-card" id="trust2">Fixed fee — no surprises</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════ TRUST BAR ════════════════════════════════════ -->
+<div class="trust-bar">
+  <div class="trust-bar-label" id="tb-label">Trusted tools &amp; credentials</div>
+  <div class="trust-bar-row">
+    <div class="trust-badge">🎓 <span id="tb-aca">ACA Qualified</span></div>
+    <div class="trust-badge">🏛️ <span id="tb-icaew">ICAEW Member</span></div>
+    <div class="trust-badge">📱 <span id="tb-mtd">MTD Ready</span></div>
+    <div class="trust-badge">⏱️ <span id="tb-years">10+ years' experience</span></div>
+    <div style="width:1px;height:24px;background:var(--vg-line)"></div>
+    <span class="software-pill">Xero</span>
+    <span class="software-pill">QuickBooks</span>
+    <span class="software-pill">FreeAgent</span>
+    <span class="software-pill">Sage</span>
+    <span class="software-pill">HMRC MTD</span>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════ ABOUT ═════════════════════════════════════════ -->
+<section class="section" id="about">
+  <div class="container about-grid">
+    <div class="about-image-wrap">
+      <div class="about-image">
+        <div style="text-align:center">
+          <div class="avatar">DG</div>
+          <p style="font-size:12px;color:var(--vg-muted);margin-top:12px" id="about-img-alt">Danuka Geekiyanage Don, Chartered Accountant</p>
+        </div>
+      </div>
+      <div class="about-image-back"></div>
+    </div>
+    <div>
+      <div class="section-eyebrow" id="about-eyebrow">About Danuka</div>
+      <h2 class="section-heading" id="about-heading">A Chartered Accountant who speaks plain English</h2>
+      <div class="about-body">
+        <p id="about-body1">I'm Danuka — a UK Chartered Accountant (ACA) with over a decade of experience helping freelancers, sole traders, landlords and small businesses take control of their finances.</p>
+        <p id="about-body2">I left the big firms because I wanted to give clients something they couldn't get there: a personal service, transparent fixed fees, and an accountant who actually picks up the phone.</p>
+        <p id="about-body3">Whether you need your self-assessment filed, your VAT sorted, or simply want to understand what Making Tax Digital means for your business — I'm here to help.</p>
+      </div>
+      <div class="about-cred" id="about-cred">ACA · BFP · ICAEW Member</div>
+      <div class="about-loc" id="about-loc">Based in London · Working UK-wide remotely</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════ SERVICES ══════════════════════════════════════ -->
+<section class="section section-alt" id="services">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:48px">
+      <div class="section-eyebrow" id="svc-eyebrow">What I do</div>
+      <h2 class="section-heading" id="svc-heading">Services built for people like you</h2>
+      <p class="section-lead" style="margin:0 auto" id="svc-lead">Plain-English accounting with fixed, transparent pricing — no hidden extras.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">📒</div>
+        <div class="service-title" id="svc1-title">Bookkeeping &amp; VAT</div>
+        <div class="service-desc" id="svc1-desc">MTD-ready VAT returns filed on time, every time. Accurate records you can rely on.</div>
+        <span class="service-audience" id="svc1-aud">Sole traders &amp; SMEs</span>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">📋</div>
+        <div class="service-title" id="svc2-title">Year-End Accounts</div>
+        <div class="service-desc" id="svc2-desc">Accurate accounts prepared and filed — Companies House and HMRC both handled, stress-free.</div>
+        <span class="service-audience" id="svc2-aud">All businesses</span>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🧾</div>
+        <div class="service-title" id="svc3-title">Self-Assessment Returns</div>
+        <div class="service-desc" id="svc3-desc">Every allowance claimed, every deadline met. Filed correctly so you keep more of what you earn.</div>
+        <span class="service-audience" id="svc3-aud">Freelancers &amp; landlords</span>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🚀</div>
+        <div class="service-title" id="svc4-title">Business Startup Advice</div>
+        <div class="service-desc" id="svc4-desc">Set up correctly from day one. Structure, registration, and the right records from the start.</div>
+        <span class="service-audience" id="svc4-aud">New founders</span>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">💡</div>
+        <div class="service-title" id="svc5-title">Tax Advice</div>
+        <div class="service-desc" id="svc5-desc">Proactive, practical advice to keep more of what you earn — legally and sustainably.</div>
+        <span class="service-audience" id="svc5-aud">Anyone</span>
+      </div>
+      <div class="service-card service-card-last">
+        <div class="service-icon">🤝</div>
+        <div class="service-title" id="svc6-title">Not sure what you need?</div>
+        <div class="service-desc" id="svc6-desc">Tell me about your situation and I'll recommend the right mix of services — free, no obligation.</div>
+        <span class="service-audience" id="svc6-aud">Free guidance</span>
+        <a href="#contact" class="service-link" id="svc6-link">Get free guidance →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════ WHY ME ════════════════════════════════════════ -->
+<section class="section" id="why-me">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:48px">
+      <div class="section-eyebrow" id="why-eyebrow">Why choose me</div>
+      <h2 class="section-heading" id="why-heading">The difference a personal accountant makes</h2>
+    </div>
+    <div class="pillars-grid">
+      <div class="pillar">
+        <div class="pillar-header"><span class="pillar-icon">🏆</span><span class="pillar-num">01</span></div>
+        <div class="pillar-title" id="p1-title">Chartered expertise</div>
+        <div class="pillar-body" id="p1-body">ACA qualified and ICAEW member — the highest standard of UK accountancy training.</div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-header"><span class="pillar-icon">💰</span><span class="pillar-num">02</span></div>
+        <div class="pillar-title" id="p2-title">Fixed pricing</div>
+        <div class="pillar-body" id="p2-body">You know the cost before we start. No hourly billing, no surprise invoices.</div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-header"><span class="pillar-icon">🤝</span><span class="pillar-num">03</span></div>
+        <div class="pillar-title" id="p3-title">Personal &amp; local</div>
+        <div class="pillar-body" id="p3-body">Based in London, available UK-wide. You deal with me — not a junior or call centre.</div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-header"><span class="pillar-icon">⚡</span><span class="pillar-num">04</span></div>
+        <div class="pillar-title" id="p4-title">Quick to respond</div>
+        <div class="pillar-body" id="p4-body">I aim to respond within one business day. Urgent? Call or WhatsApp me directly.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════ HOW IT WORKS ════════════════════════════════════ -->
+<section class="section section-alt" id="how-it-works">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:48px">
+      <div class="section-eyebrow" id="proc-eyebrow">How it works</div>
+      <h2 class="section-heading" id="proc-heading">Three simple steps to peace of mind</h2>
+    </div>
+    <div class="process-steps">
+      <div class="step">
+        <div class="step-icon">📞</div>
+        <div class="step-badge">1</div>
+        <div class="step-title" id="step1-title">Get in touch</div>
+        <div class="step-body" id="step1-body">Book a free, no-obligation call or send a message. Tell me about your situation.</div>
+      </div>
+      <div class="step">
+        <div class="step-icon">📄</div>
+        <div class="step-badge">2</div>
+        <div class="step-title" id="step2-title">Get a clear fixed quote</div>
+        <div class="step-body" id="step2-body">I'll give you a transparent, all-inclusive price. No hourly rates, no hidden extras.</div>
+      </div>
+      <div class="step">
+        <div class="step-icon">😌</div>
+        <div class="step-badge">3</div>
+        <div class="step-title" id="step3-title">Relax — I handle the rest</div>
+        <div class="step-body" id="step3-body">I take care of everything, keep you informed, and make sure you never miss a deadline.</div>
+      </div>
+    </div>
+    <div style="text-align:center">
+      <a href="#contact" class="btn-primary" id="proc-cta">Start now — it's free</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════ FAQ ══════════════════════════════════════════ -->
+<section class="section" id="faq">
+  <div class="container" style="max-width:760px">
+    <div style="text-align:center;margin-bottom:48px">
+      <div class="section-eyebrow">FAQ</div>
+      <h2 class="section-heading">Common questions, honest answers</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">How much does a self-assessment return cost?<svg class="faq-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="faq-a">Self-assessment returns start from £250 for straightforward employment income plus one property or freelance source. The exact price depends on your income sources — I'll give you a fixed quote upfront before any work begins.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Do you work outside London?<svg class="faq-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="faq-a">Yes. I'm based in London and happy to meet clients in person in the city. For clients elsewhere in the UK, I work entirely remotely via video call, email, and cloud accounting software.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Are you a qualified accountant?<svg class="faq-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="faq-a">Yes. I'm a UK Chartered Accountant (ACA) and a member of the Institute of Chartered Accountants in England and Wales (ICAEW) — the gold standard of UK accountancy qualifications.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">What is Making Tax Digital and does it affect me?<svg class="faq-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="faq-a">Making Tax Digital for Income Tax (MTD for ITSA) requires quarterly HMRC updates. It applies from 6 April 2026 if your income exceeds £50,000; April 2027 for over £30,000; April 2028 for over £20,000. I can get you fully prepared.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">When do I need to register for VAT?<svg class="faq-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="faq-a">You must register for VAT when your taxable turnover exceeds £90,000 in any rolling 12-month period (unchanged since 1 April 2024). Voluntary registration below this threshold is also possible and sometimes beneficial.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">How do fixed fees work?<svg class="faq-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="faq-a">Before any work begins, I give you a clear, all-inclusive fixed price for the service you need. That price doesn't change unless your circumstances change significantly. No hourly billing, no surprise invoices.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Which accounting software do you use?<svg class="faq-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="faq-a">I work with all major cloud platforms: Xero, QuickBooks, FreeAgent, and Sage. If you don't have software yet, I'll recommend the best fit for your business type and budget. All are MTD-compatible.</div></div>
+      <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">How quickly do you respond?<svg class="faq-chevron" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button><div class="faq-a">I aim to respond to all enquiries within one business day. For existing clients with urgent questions, you can reach me directly by phone or WhatsApp.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════ CONTACT ══════════════════════════════════════ -->
+<section class="section section-alt" id="contact">
+  <div class="container contact-grid">
+    <div>
+      <div class="section-eyebrow">Get in touch</div>
+      <h2 class="section-heading">Let's talk about your finances</h2>
+      <p style="font-size:15px;color:var(--vg-ink-soft);margin-bottom:4px">Free, no-obligation consultation. I'll give you a clear fixed quote before any work begins.</p>
+      <div class="contact-details">
+        <div class="contact-row">📧 <a href="mailto:vgdonservices@gmail.com">vgdonservices@gmail.com</a></div>
+        <div class="contact-row">📞 <span style="color:var(--vg-ink-soft)">+44 7460 855128</span></div>
+        <div class="contact-row">📍 <span style="color:var(--vg-ink-soft)">London, United Kingdom</span></div>
+      </div>
+    </div>
+    <div class="form-wrap">
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label">Full name <span class="req">*</span></label>
+          <input type="text" class="form-input" placeholder="Your full name" autocomplete="name">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Email address <span class="req">*</span></label>
+          <input type="email" class="form-input" placeholder="you@example.com" autocomplete="email">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label">Phone number <span style="opacity:.6">(optional)</span></label>
+          <input type="tel" class="form-input" placeholder="+44 7700 000000" autocomplete="tel">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Business type <span class="req">*</span></label>
+          <select class="form-select">
+            <option value="">Select your business type</option>
+            <option>Freelancer / Sole trader</option>
+            <option>Limited company</option>
+            <option>Landlord</option>
+            <option>Partnership</option>
+            <option>Startup</option>
+            <option>Other</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Services needed <span class="req">*</span></label>
+        <div class="form-checkboxes">
+          <label class="form-check"><input type="checkbox"> Bookkeeping &amp; VAT</label>
+          <label class="form-check"><input type="checkbox"> Year-End Accounts</label>
+          <label class="form-check"><input type="checkbox"> Self-Assessment Returns</label>
+          <label class="form-check"><input type="checkbox"> Business Startup Advice</label>
+          <label class="form-check"><input type="checkbox"> Tax Advice</label>
+          <label class="form-check"><input type="checkbox"> Not sure — I need guidance</label>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label">Annual turnover <span style="opacity:.6">(optional)</span></label>
+          <select class="form-select">
+            <option value="">Select a range</option>
+            <option>Under £30,000</option>
+            <option>£30,000 – £90,000</option>
+            <option>£90,000 – £250,000</option>
+            <option>£250,000+</option>
+            <option>Prefer not to say</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Preferred contact <span class="req">*</span></label>
+          <select class="form-select">
+            <option value="">Select method</option>
+            <option>Email</option>
+            <option>Phone</option>
+            <option>WhatsApp</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Message <span style="opacity:.6">(optional)</span></label>
+        <textarea class="form-textarea" placeholder="Tell me a bit about your situation..."></textarea>
+      </div>
+      <div class="form-consent">
+        <input type="checkbox" id="consent">
+        <label for="consent">I consent to VG Don Services storing my details to respond to this enquiry, in accordance with the Privacy Policy.</label>
+      </div>
+      <div class="turnstile-placeholder">🔒 Security check (Cloudflare Turnstile)</div>
+      <button class="btn-primary" style="width:100%;justify-content:center;padding:12px">Send enquiry</button>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════ FOOTER ═══════════════════════════════════════ -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <div class="footer-brand-name">VG Don Services</div>
+      <div class="footer-tagline">Chartered Accountant · London</div>
+      <div class="footer-tagline">ACA · BFP · ICAEW Member</div>
+      <div class="footer-disclaimer">VG Don Services is the trading name of Danuka Geekiyanage Don, Chartered Accountant.</div>
+    </div>
+    <div>
+      <div class="footer-col-heading">Contact</div>
+      <div class="footer-links">
+        <a href="mailto:vgdonservices@gmail.com">vgdonservices@gmail.com</a>
+        <a href="tel:+447460855128">+44 7460 855128</a>
+        <span>London, United Kingdom</span>
+        <span>Mon–Fri 9am–6pm</span>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-heading">Legal</div>
+      <div class="footer-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Engagement</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-copy">© 2026 VG Don Services. All rights reserved.</div>
+</footer>
+
+<!-- ═══════════════════════════════════ THEME DOCK ══════════════════════════════════════ -->
+<div id="theme-dock">
+  <span class="dock-label">Theme</span>
+  <button class="theme-btn active" onclick="setTheme('warm-bronze')" id="btn-warm-bronze">A Warm Bronze</button>
+  <button class="theme-btn" onclick="setTheme('trust-navy')" id="btn-trust-navy">B Trust Navy</button>
+  <button class="theme-btn" onclick="setTheme('quiet-luxe')" id="btn-quiet-luxe">C Quiet Luxe</button>
+  <button class="theme-btn" onclick="setTheme('coral-midnight')" id="btn-coral-midnight">D Coral &amp; Midnight</button>
+  <button class="theme-btn" onclick="setTheme('azure-cloud')" id="btn-azure-cloud">E Azure &amp; Cloud</button>
+  <button class="theme-btn" onclick="setTheme('forest-clay')" id="btn-forest-clay">F Forest &amp; Clay</button>
+  <div class="dock-sep"></div>
+  <span class="dock-label">Lang</span>
+  <button class="lang-btn active" onclick="setLang('en')" id="lang-en">🇬🇧 EN</button>
+  <button class="lang-btn" onclick="setLang('fr')" id="lang-fr">🇫🇷 FR</button>
+  <button class="lang-btn" onclick="setLang('it')" id="lang-it">🇮🇹 IT</button>
+</div>
+
+<script>
+// ─── Theme definitions ─────────────────────────────────────────────────────────
+const themes = {
+  'warm-bronze': {
+    name: 'Warm Bronze & Espresso',
+    font: 'https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Inter:wght@400;500;600;700&display=swap',
+    tokens: {
+      '--vg-bg': '#F3E9D7', '--vg-surface': '#FDF6EC', '--vg-surface-2': '#EAD9BF',
+      '--vg-ink': '#2E2620', '--vg-ink-soft': '#5C4A3A', '--vg-muted': '#8C7460',
+      '--vg-line': '#DDD0B8', '--vg-brand': '#9A6A3C', '--vg-brand-press': '#7A5230',
+      '--vg-accent': '#B8854F', '--vg-on-brand': '#FFFFFF', '--vg-on-accent': '#FFFFFF',
+      '--vg-cta-bg': '#9A6A3C', '--vg-cta-ink': '#FFFFFF',
+      '--vg-hero-bg': '#F3E9D7', '--vg-hero-ink': '#2E2620', '--vg-hero-eyebrow': '#9A6A3C',
+      '--vg-hero-accent': '#B8854F', '--vg-bar-bg': '#2E2620', '--vg-bar-ink': '#F3E9D7',
+      '--vg-frame-back': '#B8854F', '--vg-frame-radius': '24px',
+      '--vg-font-display': "'Lora', Georgia, serif", '--vg-font-body': "'Inter', system-ui, sans-serif",
+      '--vg-radius': '12px', '--vg-radius-sm': '6px', '--vg-radius-btn': '13px',
+      '--vg-shadow': '0 4px 24px rgba(46,38,32,0.10)', '--vg-shadow-sm': '0 2px 8px rgba(46,38,32,0.07)',
+      '--vg-display-spacing': '-0.02em', '--vg-h1-weight': '600',
+    }
+  },
+  'trust-navy': {
+    name: 'Trust Navy & Sage',
+    font: 'https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap',
+    tokens: {
+      '--vg-bg': '#F4F1EA', '--vg-surface': '#FFFFFF', '--vg-surface-2': '#E8E3D8',
+      '--vg-ink': '#16263D', '--vg-ink-soft': '#2D4A6E', '--vg-muted': '#5A7394',
+      '--vg-line': '#D4CEBC', '--vg-brand': '#16263D', '--vg-brand-press': '#0D1929',
+      '--vg-accent': '#5C8268', '--vg-on-brand': '#FFFFFF', '--vg-on-accent': '#FFFFFF',
+      '--vg-cta-bg': '#16263D', '--vg-cta-ink': '#FFFFFF',
+      '--vg-hero-bg': '#16263D', '--vg-hero-ink': '#FFFFFF', '--vg-hero-eyebrow': '#5C8268',
+      '--vg-hero-accent': '#5C8268', '--vg-bar-bg': '#5C8268', '--vg-bar-ink': '#FFFFFF',
+      '--vg-frame-back': '#5C8268', '--vg-frame-radius': '20px',
+      '--vg-font-display': "'Bricolage Grotesque', 'Inter', sans-serif", '--vg-font-body': "'Inter', system-ui, sans-serif",
+      '--vg-radius': '10px', '--vg-radius-sm': '5px', '--vg-radius-btn': '10px',
+      '--vg-shadow': '0 4px 24px rgba(22,38,61,0.12)', '--vg-shadow-sm': '0 2px 8px rgba(22,38,61,0.08)',
+      '--vg-display-spacing': '-0.03em', '--vg-h1-weight': '700',
+    }
+  },
+  'quiet-luxe': {
+    name: 'Quiet Luxe Monochrome + Gold',
+    font: 'https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600&family=Inter:wght@400;500;600;700&display=swap',
+    tokens: {
+      '--vg-bg': '#FAF9F6', '--vg-surface': '#FFFFFF', '--vg-surface-2': '#F0EEE9',
+      '--vg-ink': '#1A1A1A', '--vg-ink-soft': '#3D3D3D', '--vg-muted': '#6B6B6B',
+      '--vg-line': '#E0DDD6', '--vg-brand': '#1A1A1A', '--vg-brand-press': '#000000',
+      '--vg-accent': '#B7942F', '--vg-on-brand': '#FFFFFF', '--vg-on-accent': '#FFFFFF',
+      '--vg-cta-bg': '#B7942F', '--vg-cta-ink': '#FFFFFF',
+      '--vg-hero-bg': '#1A1A1A', '--vg-hero-ink': '#FAF9F6', '--vg-hero-eyebrow': '#B7942F',
+      '--vg-hero-accent': '#B7942F', '--vg-bar-bg': '#1A1A1A', '--vg-bar-ink': '#FAF9F6',
+      '--vg-frame-back': '#B7942F', '--vg-frame-radius': '4px',
+      '--vg-font-display': "'Crimson Pro', 'Georgia', serif", '--vg-font-body': "'Inter', system-ui, sans-serif",
+      '--vg-radius': '4px', '--vg-radius-sm': '2px', '--vg-radius-btn': '4px',
+      '--vg-shadow': '0 4px 24px rgba(0,0,0,0.10)', '--vg-shadow-sm': '0 2px 8px rgba(0,0,0,0.06)',
+      '--vg-display-spacing': '-0.01em', '--vg-h1-weight': '400',
+    }
+  },
+  'coral-midnight': {
+    name: 'Coral & Midnight',
+    font: 'https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap',
+    tokens: {
+      '--vg-bg': '#FBF1E6', '--vg-surface': '#FFFFFF', '--vg-surface-2': '#F2E4CE',
+      '--vg-ink': '#27314F', '--vg-ink-soft': '#3D4E72', '--vg-muted': '#6678A0',
+      '--vg-line': '#E0D4BC', '--vg-brand': '#F1543F', '--vg-brand-press': '#D03D2A',
+      '--vg-accent': '#F6B33F', '--vg-on-brand': '#FFFFFF', '--vg-on-accent': '#27314F',
+      '--vg-cta-bg': '#F1543F', '--vg-cta-ink': '#FFFFFF',
+      '--vg-hero-bg': '#27314F', '--vg-hero-ink': '#FFFFFF', '--vg-hero-eyebrow': '#F6B33F',
+      '--vg-hero-accent': '#F6B33F', '--vg-bar-bg': '#0E7C8B', '--vg-bar-ink': '#FFFFFF',
+      '--vg-frame-back': '#F6B33F', '--vg-frame-radius': '46% 54% 58% 42% / 54% 44% 56% 46%',
+      '--vg-font-display': "'Bricolage Grotesque', 'Inter', sans-serif", '--vg-font-body': "'Inter', system-ui, sans-serif",
+      '--vg-radius': '14px', '--vg-radius-sm': '8px', '--vg-radius-btn': '999px',
+      '--vg-shadow': '0 4px 24px rgba(39,49,79,0.12)', '--vg-shadow-sm': '0 2px 8px rgba(39,49,79,0.08)',
+      '--vg-display-spacing': '-0.02em', '--vg-h1-weight': '700',
+    }
+  },
+  'azure-cloud': {
+    name: 'Azure & Cloud',
+    font: 'https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap',
+    tokens: {
+      '--vg-bg': '#E3E7EF', '--vg-surface': '#FFFFFF', '--vg-surface-2': '#D0D6E4',
+      '--vg-ink': '#16356B', '--vg-ink-soft': '#2A4E8C', '--vg-muted': '#4E6FA0',
+      '--vg-line': '#C0C8D8', '--vg-brand': '#1F6FD6', '--vg-brand-press': '#1558B0',
+      '--vg-accent': '#F5D416', '--vg-on-brand': '#FFFFFF', '--vg-on-accent': '#16356B',
+      '--vg-cta-bg': '#F5D416', '--vg-cta-ink': '#16356B',
+      '--vg-hero-bg': '#E3E7EF', '--vg-hero-ink': '#16356B', '--vg-hero-eyebrow': '#1F6FD6',
+      '--vg-hero-accent': '#1F6FD6', '--vg-bar-bg': '#16356B', '--vg-bar-ink': '#FFFFFF',
+      '--vg-frame-back': '#1F6FD6', '--vg-frame-radius': '8px',
+      '--vg-font-display': "'Instrument Sans', 'Inter', sans-serif", '--vg-font-body': "'Inter', system-ui, sans-serif",
+      '--vg-radius': '10px', '--vg-radius-sm': '5px', '--vg-radius-btn': '8px',
+      '--vg-shadow': '0 4px 24px rgba(22,53,107,0.12)', '--vg-shadow-sm': '0 2px 8px rgba(22,53,107,0.08)',
+      '--vg-display-spacing': '-0.02em', '--vg-h1-weight': '700',
+    }
+  },
+  'forest-clay': {
+    name: 'Forest & Clay',
+    font: 'https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Inter:wght@400;500;600;700&display=swap',
+    tokens: {
+      '--vg-bg': '#F4F1E9', '--vg-surface': '#FFFFFF', '--vg-surface-2': '#E8E3D4',
+      '--vg-ink': '#1D2E26', '--vg-ink-soft': '#314C3F', '--vg-muted': '#5A7A6A',
+      '--vg-line': '#D4CCBA', '--vg-brand': '#314C3F', '--vg-brand-press': '#203328',
+      '--vg-accent': '#D98E73', '--vg-on-brand': '#FFFFFF', '--vg-on-accent': '#FFFFFF',
+      '--vg-cta-bg': '#D98E73', '--vg-cta-ink': '#FFFFFF',
+      '--vg-hero-bg': '#2E4039', '--vg-hero-ink': '#FFFFFF', '--vg-hero-eyebrow': '#D98E73',
+      '--vg-hero-accent': '#D98E73', '--vg-bar-bg': '#314C3F', '--vg-bar-ink': '#FFFFFF',
+      '--vg-frame-back': '#D98E73', '--vg-frame-radius': '999px',
+      '--vg-font-display': "'Libre Baskerville', 'Georgia', serif", '--vg-font-body': "'Inter', system-ui, sans-serif",
+      '--vg-radius': '12px', '--vg-radius-sm': '6px', '--vg-radius-btn': '999px',
+      '--vg-shadow': '0 4px 24px rgba(30,46,38,0.10)', '--vg-shadow-sm': '0 2px 8px rgba(30,46,38,0.06)',
+      '--vg-display-spacing': '-0.01em', '--vg-h1-weight': '400',
+    }
+  }
+}
+
+// ─── Language strings ─────────────────────────────────────────────────────────
+const strings = {
+  en: {
+    'tb-text': 'Fixed-fee accounting for freelancers & small businesses',
+    'tb-cta': 'Get in touch →',
+    'hero-eyebrow': 'London Chartered Accountant',
+    'hero-h1': 'Chartered expertise.',
+    'hero-h2': 'Freelance rates.',
+    'hero-lead': "Friendly, fixed-fee accounting for freelancers, sole traders and small businesses across London — with a real person who actually picks up the phone.",
+    'chip1': 'Chartered Accountant', 'chip2': 'Fixed pricing', 'chip3': 'Local & personal',
+    'cta1': 'Get a free quote →', 'cta2': 'See services',
+    'trust1': 'Self-Assessment filed ✓', 'trust2': 'Fixed fee — no surprises',
+  },
+  fr: {
+    'tb-text': 'Comptabilité à prix fixe pour freelances et PME',
+    'tb-cta': 'Nous contacter →',
+    'hero-eyebrow': 'Expert-comptable agréé à Londres',
+    'hero-h1': 'Expertise de chartered.',
+    'hero-h2': 'Tarifs freelance.',
+    'hero-lead': "Comptabilité conviviale à prix fixe pour les freelances, auto-entrepreneurs et PME à travers Londres — avec une vraie personne qui décroche le téléphone.",
+    'chip1': 'Expert-comptable agréé', 'chip2': 'Prix fixe', 'chip3': 'Local & personnel',
+    'cta1': 'Obtenir un devis gratuit →', 'cta2': 'Voir les services',
+    'trust1': 'Déclaration fiscale déposée ✓', 'trust2': 'Prix fixe — sans surprises',
+  },
+  it: {
+    'tb-text': 'Contabilità a prezzo fisso per freelance e PMI',
+    'tb-cta': 'Contattami →',
+    'hero-eyebrow': 'Commercialista iscritto all\'albo a Londra',
+    'hero-h1': 'Competenza chartered.',
+    'hero-h2': 'Tariffe da freelance.',
+    'hero-lead': "Contabilità amichevole a prezzo fisso per freelance, lavoratori autonomi e piccole imprese in tutta Londra — con una persona vera che risponde al telefono.",
+    'chip1': 'Commercialista qualificato', 'chip2': 'Prezzi fissi', 'chip3': 'Locale & personale',
+    'cta1': 'Richiedi un preventivo gratuito →', 'cta2': 'Vedi i servizi',
+    'trust1': 'Dichiarazione dei redditi presentata ✓', 'trust2': 'Prezzo fisso — nessuna sorpresa',
+  }
+}
+
+// ─── Font cache ────────────────────────────────────────────────────────────────
+const loadedFonts = new Set()
+let fontLink = null
+
+function loadFont(url) {
+  if (loadedFonts.has(url)) return
+  loadedFonts.add(url)
+  if (!fontLink) {
+    fontLink = document.createElement('link')
+    fontLink.rel = 'stylesheet'
+    document.head.appendChild(fontLink)
+  }
+  fontLink.href = url
+}
+
+// ─── Set theme ─────────────────────────────────────────────────────────────────
+let currentTheme = 'warm-bronze'
+function setTheme(key) {
+  const t = themes[key]
+  if (!t) return
+  currentTheme = key
+
+  // Apply tokens to :root
+  const root = document.documentElement
+  Object.entries(t.tokens).forEach(([k, v]) => root.style.setProperty(k, v))
+
+  // Load font
+  loadFont(t.font)
+
+  // Update font-display custom property (the CSS var needs to match)
+  // It's already set via the token above, but body font-family needs direct update
+  // since CSS var in font-family needs a refresh trigger
+  document.body.style.fontFamily = t.tokens['--vg-font-body']
+
+  // Update active button
+  document.querySelectorAll('.theme-btn').forEach(b => b.classList.remove('active'))
+  document.getElementById('btn-' + key)?.classList.add('active')
+}
+
+// ─── Set language ──────────────────────────────────────────────────────────────
+let currentLang = 'en'
+function setLang(lang) {
+  const s = strings[lang]
+  if (!s) return
+  currentLang = lang
+  Object.entries(s).forEach(([id, text]) => {
+    const el = document.getElementById(id)
+    if (el) el.textContent = text
+  })
+  document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'))
+  document.getElementById('lang-' + lang)?.classList.add('active')
+}
+
+// ─── FAQ accordion ─────────────────────────────────────────────────────────────
+function toggleFaq(btn) {
+  const item = btn.closest('.faq-item')
+  const isOpen = item.classList.contains('open')
+  document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'))
+  if (!isOpen) item.classList.add('open')
+}
+
+// ─── Init ──────────────────────────────────────────────────────────────────────
+loadFont(themes['warm-bronze'].font)
+</script>
+</body>
+</html>

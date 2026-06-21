@@ -1,0 +1,229 @@
+{
+  "nav": {
+    "services": "Servizi",
+    "about": "Chi sono",
+    "whyMe": "Perché scegliermi",
+    "howItWorks": "Come funziona",
+    "faq": "FAQ",
+    "contact": "Contatti",
+    "getQuote": "Richiedi un preventivo gratuito",
+    "menu": "Menu",
+    "close": "Chiudi menu"
+  },
+  "topbar": {
+    "text": "Contabilità a prezzo fisso per freelance e PMI",
+    "cta": "Contattami"
+  },
+  "hero": {
+    "eyebrow": "Commercialista iscritto all'albo a Londra",
+    "headline1": "Competenza chartered.",
+    "headline2": "Tariffe da freelance.",
+    "lead": "Contabilità amichevole a prezzo fisso per freelance, lavoratori autonomi e piccole imprese in tutta Londra — con una persona vera che risponde al telefono.",
+    "cta1": "Richiedi un preventivo gratuito →",
+    "cta2": "Vedi i servizi",
+    "chip1": "Commercialista qualificato",
+    "chip2": "Prezzi fissi",
+    "chip3": "Locale & personale",
+    "trust1": "Dichiarazione dei redditi presentata ✓",
+    "trust2": "Prezzo fisso — nessuna sorpresa"
+  },
+  "trustBar": {
+    "label": "Strumenti e credenziali affidabili",
+    "years": "10+ anni di esperienza",
+    "aca": "Certificato ACA",
+    "icaew": "Membro ICAEW",
+    "mtd": "Pronto per MTD"
+  },
+  "about": {
+    "eyebrow": "Chi è Danuka",
+    "headline": "Un commercialista che parla in modo chiaro",
+    "body1": "Sono Danuka — commercialista iscritto all'albo nel Regno Unito (ACA) con oltre dieci anni di esperienza nell'aiutare freelance, lavoratori autonomi, proprietari di immobili e piccole imprese a gestire le proprie finanze.",
+    "body2": "Ho lasciato i grandi studi perché volevo offrire ai clienti qualcosa che lì non potevano trovare: un servizio personale, onorari fissi e trasparenti e un commercialista che risponde davvero al telefono.",
+    "body3": "Che tu abbia bisogno di presentare la dichiarazione dei redditi, sistemare l'IVA o semplicemente capire cosa significa Making Tax Digital per la tua attività — sono qui per aiutarti.",
+    "credentials": "ACA · BFP · Membro ICAEW",
+    "location": "Con sede a Londra · Disponibile in tutto il Regno Unito da remoto",
+    "imageAlt": "Danuka Geekiyanage Don, Commercialista iscritto all'albo"
+  },
+  "services": {
+    "eyebrow": "Cosa faccio",
+    "headline": "Servizi pensati per te",
+    "lead": "Contabilità in parole semplici con prezzi fissi e trasparenti — senza costi nascosti.",
+    "bookkeeping-vat": {
+      "title": "Contabilità & IVA",
+      "description": "Dichiarazioni IVA compatibili MTD presentate puntualmente, ogni volta. Registrazioni accurate su cui puoi fare affidamento.",
+      "audience": "Lavoratori autonomi & PMI"
+    },
+    "year-end-accounts": {
+      "title": "Bilancio annuale",
+      "description": "Conti preparati e presentati con precisione — Companies House e HMRC gestiti senza stress.",
+      "audience": "Tutte le imprese"
+    },
+    "self-assessment": {
+      "title": "Dichiarazioni dei redditi",
+      "description": "Ogni detrazione richiesta, ogni scadenza rispettata. Presentata correttamente per farti tenere di più di quello che guadagni.",
+      "audience": "Freelance & proprietari di immobili"
+    },
+    "startup-advice": {
+      "title": "Consulenza per avvio d'impresa",
+      "description": "Inizia nel modo giusto fin dal primo giorno. Struttura, registrazione e le giuste pratiche contabili dall'inizio.",
+      "audience": "Nuovi imprenditori"
+    },
+    "tax-advice": {
+      "title": "Consulenza fiscale",
+      "description": "Consigli proattivi e pratici per tenere di più di quello che guadagni — legalmente e in modo sostenibile.",
+      "audience": "Chiunque"
+    },
+    "not-sure": {
+      "title": "Non sai di cosa hai bisogno?",
+      "description": "Parlami della tua situazione e ti consiglierò la giusta combinazione di servizi — gratis, senza impegno.",
+      "audience": "Consulenza gratuita"
+    }
+  },
+  "whyMe": {
+    "eyebrow": "Perché scegliermi",
+    "headline": "La differenza di un commercialista personale",
+    "pillar1Title": "Competenza riconosciuta",
+    "pillar1Body": "Certificato ACA e membro ICAEW — il massimo standard di formazione contabile nel Regno Unito.",
+    "pillar2Title": "Prezzi fissi",
+    "pillar2Body": "Conosci il costo prima di iniziare. Nessuna fatturazione oraria, nessuna fattura a sorpresa.",
+    "pillar3Title": "Personale & locale",
+    "pillar3Body": "Con sede a Londra, disponibile in tutto il Regno Unito. Hai a che fare con me — non con un collaboratore junior.",
+    "pillar4Title": "Risposta rapida",
+    "pillar4Body": "Cerco di rispondere entro un giorno lavorativo. Urgente? Chiamami o mandami un messaggio su WhatsApp."
+  },
+  "process": {
+    "eyebrow": "Come funziona",
+    "headline": "Tre semplici passi per la tranquillità",
+    "step1Title": "Contattami",
+    "step1Body": "Prenota una chiamata gratuita o invia un messaggio. Parlami della tua situazione.",
+    "step2Title": "Ricevi un preventivo fisso chiaro",
+    "step2Body": "Ti darò un prezzo trasparente e tutto incluso. Nessuna tariffa oraria, nessun costo nascosto.",
+    "step3Title": "Rilassati — penso a tutto io",
+    "step3Body": "Mi occupo di tutto, ti tengo informato e mi assicuro che non perda mai una scadenza.",
+    "cta": "Inizia ora — è gratuito"
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "headline": "Domande frequenti, risposte oneste",
+    "self-assessment-cost": {
+      "question": "Quanto costa una dichiarazione dei redditi?",
+      "answer": "Le dichiarazioni dei redditi partono da £250 per redditi da lavoro dipendente semplici più una fonte immobiliare o freelance. Il prezzo esatto dipende dalle tue fonti di reddito — ti fornisco un preventivo fisso in anticipo prima di iniziare qualsiasi lavoro."
+    },
+    "outside-london": {
+      "question": "Lavori anche fuori Londra?",
+      "answer": "Sì. Sono basato a Londra e sono felice di incontrare i clienti di persona in città. Per i clienti altrove nel Regno Unito, lavoro interamente da remoto tramite videochiamata, e-mail e software contabile cloud."
+    },
+    "qualified-accountant": {
+      "question": "Sei un commercialista qualificato?",
+      "answer": "Sì. Sono un commercialista iscritto all'albo nel Regno Unito (ACA) e membro dell'Istituto dei Commercialisti d'Inghilterra e del Galles (ICAEW) — il massimo standard di qualificazione contabile britannica."
+    },
+    "making-tax-digital": {
+      "question": "Cos'è Making Tax Digital e mi riguarda?",
+      "answer": "Making Tax Digital per la dichiarazione dei redditi (MTD per ITSA) richiede ai lavoratori autonomi e ai proprietari di immobili di tenere registrazioni digitali e inviare aggiornamenti trimestrali all'HMRC. Si applica dal 6 aprile 2026 se il tuo reddito supera £50.000; aprile 2027 per oltre £30.000; aprile 2028 per oltre £20.000."
+    },
+    "vat-registration": {
+      "question": "Quando devo registrarmi per l'IVA?",
+      "answer": "Devi registrarti per l'IVA quando il tuo fatturato imponibile supera £90.000 in qualsiasi periodo di 12 mesi consecutivi (invariato dal 1° aprile 2024). Puoi anche registrarti volontariamente al di sotto di questa soglia."
+    },
+    "fixed-fees": {
+      "question": "Come funzionano gli onorari fissi?",
+      "answer": "Prima di iniziare qualsiasi lavoro, ti fornisco un prezzo fisso e tutto incluso per il servizio di cui hai bisogno. Quel prezzo non cambia a meno che le tue circostanze non cambino significativamente. Nessuna fatturazione oraria, nessuna fattura a sorpresa."
+    },
+    "accounting-software": {
+      "question": "Quale software di contabilità utilizzi?",
+      "answer": "Lavoro con tutte le principali piattaforme cloud: Xero, QuickBooks, FreeAgent e Sage. Se non hai ancora un software, ti consiglierò quello più adatto al tuo tipo di attività e budget."
+    },
+    "response-time": {
+      "question": "Con quale rapidità rispondi?",
+      "answer": "Cerco di rispondere a tutte le richieste entro un giorno lavorativo. Per i clienti esistenti con domande urgenti, puoi contattarmi direttamente per telefono o WhatsApp."
+    }
+  },
+  "contact": {
+    "eyebrow": "Contattami",
+    "headline": "Parliamo delle tue finanze",
+    "lead": "Consulenza gratuita e senza impegno. Ti fornirò un preventivo fisso chiaro prima di iniziare qualsiasi lavoro.",
+    "form": {
+      "name": "Nome completo",
+      "namePlaceholder": "Il tuo nome completo",
+      "email": "Indirizzo e-mail",
+      "emailPlaceholder": "tu@esempio.com",
+      "phone": "Numero di telefono (opzionale)",
+      "phonePlaceholder": "+39 000 000 0000",
+      "businessType": "Tipo di attività",
+      "businessTypePlaceholder": "Seleziona il tuo tipo di attività",
+      "services": "Servizi necessari",
+      "turnover": "Fatturato annuale (opzionale)",
+      "turnoverPlaceholder": "Seleziona una fascia",
+      "contactMethod": "Metodo di contatto preferito",
+      "preferredTime": "Momento migliore per essere contattato (opzionale)",
+      "preferredTimePlaceholder": "Seleziona un orario",
+      "message": "Messaggio (opzionale)",
+      "messagePlaceholder": "Raccontami un po' della tua situazione...",
+      "consent": "Acconsento a che VG Don Services conservi i miei dati per rispondere a questa richiesta, in conformità con la Privacy Policy.",
+      "submit": "Invia richiesta",
+      "submitting": "Invio in corso...",
+      "successTitle": "Richiesta inviata!",
+      "successBody": "Grazie — ti risponderò entro un giorno lavorativo.",
+      "errorTitle": "Qualcosa è andato storto",
+      "errorBody": "Riprova, oppure inviami un'e-mail direttamente a vgdonservices@gmail.com",
+      "errorSummaryTitle": "Correggi i seguenti errori:",
+      "turnstileLabel": "Verifica di sicurezza"
+    },
+    "businessTypes": {
+      "freelancer-sole-trader": "Freelance / Lavoratore autonomo",
+      "limited-company": "Società a responsabilità limitata",
+      "landlord": "Proprietario di immobili",
+      "partnership": "Società in nome collettivo",
+      "startup": "Startup",
+      "other": "Altro"
+    },
+    "services": {
+      "bookkeeping-vat": "Contabilità & IVA",
+      "year-end-accounts": "Bilancio annuale",
+      "self-assessment": "Dichiarazioni dei redditi",
+      "startup-advice": "Consulenza per avvio d'impresa",
+      "tax-advice": "Consulenza fiscale",
+      "not-sure": "Non sono sicuro — ho bisogno di una guida"
+    },
+    "turnoverBands": {
+      "under-30k": "Meno di £30.000",
+      "30k-90k": "£30.000 – £90.000",
+      "90k-250k": "£90.000 – £250.000",
+      "250k-plus": "£250.000+",
+      "prefer-not-to-say": "Preferisco non dirlo"
+    },
+    "contactMethods": {
+      "email": "E-mail",
+      "phone": "Telefono",
+      "whatsapp": "WhatsApp"
+    },
+    "preferredTimes": {
+      "morning": "Mattina (9:00–12:00)",
+      "afternoon": "Pomeriggio (12:00–17:00)",
+      "evening": "Sera (17:00–20:00)"
+    }
+  },
+  "footer": {
+    "tagline": "Commercialista iscritto all'albo · Londra",
+    "credentials": "ACA · BFP · Membro ICAEW",
+    "hours": "Lun–Ven 9:00–18:00",
+    "email": "vgdonservices@gmail.com",
+    "phone": "+44 7460 855128",
+    "address": "Londra, Regno Unito",
+    "privacy": "Privacy Policy",
+    "terms": "Termini",
+    "copyright": "© {year} VG Don Services. Tutti i diritti riservati.",
+    "disclaimer": "VG Don Services è il nome commerciale di Danuka Geekiyanage Don, Commercialista iscritto all'albo."
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "lastUpdated": "Ultimo aggiornamento: giugno 2026"
+  },
+  "terms": {
+    "title": "Termini di servizio",
+    "lastUpdated": "Ultimo aggiornamento: giugno 2026"
+  },
+  "recommender": {
+    "placeholder": "Fase 2 — contenuto del raccomandatore riservato"
+  }
+}

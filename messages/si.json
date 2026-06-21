@@ -1,0 +1,229 @@
+{
+  "nav": {
+    "services": "සේවාවන්",
+    "about": "මා ගැන",
+    "whyMe": "මා තෝරාගන්නේ ඇයි",
+    "howItWorks": "ක්‍රියාවලිය",
+    "faq": "නිතර අසන ප්‍රශ්න",
+    "contact": "සම්බන්ධ වන්න",
+    "getQuote": "නොමිලේ ලියාපදිංචි වන්න",
+    "menu": "මෙනුව",
+    "close": "මෙනුව වසන්න"
+  },
+  "topbar": {
+    "text": "ස්වාධීන ව්‍යාපාරිකයන් සඳහා නියත ගාස්තු ගිණුම්කරණය",
+    "cta": "සම්බන්ධ වන්න"
+  },
+  "hero": {
+    "eyebrow": "ලන්ඩනයේ ඔත්තු ගිණුම්කරු",
+    "headline1": "ප්‍රවීණ ගිණුම්කරණය.",
+    "headline2": "ශ්‍රමිකයාගේ මිලගණන්.",
+    "lead": "ස්වාධීන ව්‍යාපාරිකයන්, තනි ව්‍යාපාරිකයන් සහ කුඩා ව්‍යාපාර සඳහා ලන්ඩනය පුරා මිත්‍රශීලී, නියත ගාස්තු ගිණුම්කරණය — දුරකථනයට සත්‍ය ලෙස පිළිතුරු දෙන පුද්ගලයෙකු සමඟ.",
+    "cta1": "නොමිලේ ලියාපදිංචි වන්න →",
+    "cta2": "සේවාවන් බලන්න",
+    "chip1": "ප්‍රවීණ ගිණුම්කරු",
+    "chip2": "නියත ගාස්තු",
+    "chip3": "පෞද්ගලික සේවාව",
+    "trust1": "ස්වයං-තක්සේරු ගොනු කර ඇත ✓",
+    "trust2": "නියත ගාස්තු — අනපේක්ෂිත වියදම් නොමැත"
+  },
+  "trustBar": {
+    "label": "විශ්වාසදායක මෙවලම් සහ සාක්ෂි",
+    "years": "අවුරුදු 10+ අත්දැකීම",
+    "aca": "ACA සහතිකය",
+    "icaew": "ICAEW සාමාජිකය",
+    "mtd": "MTD සූදානම්"
+  },
+  "about": {
+    "eyebrow": "දනුකා ගැන",
+    "headline": "සරල භාෂාවෙන් කතා කරන ගිණුම්කරුවෙකු",
+    "body1": "මම දනුකා — UK ප්‍රවීණ ගිණුම්කරු (ACA). ස්වාධීන ව්‍යාපාරිකයන්, තනි ව්‍යාපාරිකයන්, බදු ගෙවන්නන් සහ කුඩා ව්‍යාපාර ආර්ථිකය ශක්තිමත් කිරීමට දශකයකට වැඩි කාලයක් ලෙ ​​ කටයුතු කළෙමි.",
+    "body2": "ප්‍රධාන ආයතන හැර ගියේ ග්‍රාහකයන්ට ලබා නොදුන් දෙය ලබා දීමටය: පෞද්ගලික සේවාව, විනිවිද ​​ නියත ගාස්තු, සහ ඇත්ත ගිණුම්කරුවෙකු.",
+    "body3": "ඔබේ ස්වයං-තක්සේරු ගොනු කිරීමට, VAT සකස් කිරීමට, හෝ Making Tax Digital ඔබේ ව්‍යාපාරයට අදාළ ද යන්න දැනගැනීමට — මම මෙහි ඔබ සමඟ සිටිමි.",
+    "credentials": "ACA · BFP · ICAEW සාමාජිකය",
+    "location": "ලන්ඩනයේ · UK පුරා දුරස්ථව",
+    "imageAlt": "දනුකා ගීකියනේ ඩොන්, ප්‍රවීණ ගිණුම්කරු"
+  },
+  "services": {
+    "eyebrow": "මා කරන්නේ කුමක්ද",
+    "headline": "ඔබ සඳහා නිර්මාණය කළ සේවාවන්",
+    "lead": "සරල, නියත, විනිවිද ​​ ගාස්තු සහිත ගිණුම්කරණය — සඟවා ඇති ගාස්තු නොමැත.",
+    "bookkeeping-vat": {
+      "title": "ගිණුම්කරණය සහ VAT",
+      "description": "MTD සූදානම් VAT ප්‍රතිලාභ කාලෙට ගොනු කෙරේ. ඔබ වෙනුවෙන් විශ්වාසදායී ලෙ ​​ ස්ථිරසාර වාර්තා.",
+      "audience": "තනි ව්‍යාපාරිකයන් සහ SME"
+    },
+    "year-end-accounts": {
+      "title": "වාර්ෂික ගිණුම්",
+      "description": "නිවැරදිව සකස් කළ ගිණුම් ගොනු කෙරේ — Companies House සහ HMRC කිසිදු ආතතියකින් තොරව.",
+      "audience": "සෑම ව්‍යාපාරයකම"
+    },
+    "self-assessment": {
+      "title": "ස්වයං-තක්සේරු ප්‍රතිලාභ",
+      "description": "සෑම ​​ කපා ​​ ඉල්ලූ, සෑම ​​ කාලීන ‍ ​​ ​​ ​​. ගොනු කෙරෙන ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​.",
+      "audience": "ස්වාධීන ව්‍යාපාරිකයන් සහ බදු ​​"
+    },
+    "startup-advice": {
+      "title": "ව්‍යාපාරය ආරම්භ කිරීමේ ​​",
+      "description": "​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​.",
+      "audience": "නව ​​"
+    },
+    "tax-advice": {
+      "title": "​​ ​​",
+      "description": "​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​.",
+      "audience": "​​"
+    },
+    "not-sure": {
+      "title": "​​ ​​ ​​ ​​ ​​?",
+      "description": "ඔබේ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​ ​​.",
+      "audience": "​​ ​​"
+    }
+  },
+  "whyMe": {
+    "eyebrow": "​​ ​​ ​​",
+    "headline": "​​ ​​ ​​ ​​ ​​",
+    "pillar1Title": "​​ ​​",
+    "pillar1Body": "ACA ​​ ICAEW ​​ — UK ​​ ​​ ​​ ​​.",
+    "pillar2Title": "​​ ​​",
+    "pillar2Body": "​​ ​​ ​​ ​​ ​​ ​​. ​​ ​​, ​​ ​​ ​​.",
+    "pillar3Title": "​​ ​​",
+    "pillar3Body": "ලන්ඩනය ​​, UK ​​ ​​. ​​ ​​ ​​ — ​​ ​​.",
+    "pillar4Title": "​​ ​​",
+    "pillar4Body": "​​ ​​ ​​ ​​. ​​? ​​ WhatsApp ​​."
+  },
+  "process": {
+    "eyebrow": "​​ ​​",
+    "headline": "​​ ​​ ​​ ​​",
+    "step1Title": "​​ ​​",
+    "step1Body": "​​ ​​ ​​ ​​ ​​. ​​ ​​ ​​.",
+    "step2Title": "​​ ​​ ​​",
+    "step2Body": "​​ ​​ ​​ ​​. ​​ ​​, ​​ ​​.",
+    "step3Title": "​​ — ​​ ​​",
+    "step3Body": "​​ ​​, ​​ ​​ ​​ ​​ ​​ ​​.",
+    "cta": "​​ ​​ — ​​"
+  },
+  "faq": {
+    "eyebrow": "​​ ​​",
+    "headline": "​​ ​​, ​​ ​​",
+    "self-assessment-cost": {
+      "question": "​​ ​​ ​​ ​​?",
+      "answer": "​​ £250 ​​ ​​ ​​ ​​. ​​ ​​ ​​ ​​ — ​​ ​​ ​​ ​​ ​​."
+    },
+    "outside-london": {
+      "question": "ලන්ඩනයෙන් ​​ ​​?",
+      "answer": "​​. ​​ ​​ ​​ ​​. UK ​​ ​​ ​​, ​​ ​​, ​​ ​​ ​​."
+    },
+    "qualified-accountant": {
+      "question": "​​ ​​ ​​?",
+      "answer": "​​. ​​ UK ​​ (ACA) ​​ ICAEW ​​ — UK ​​ ​​."
+    },
+    "making-tax-digital": {
+      "question": "Making Tax Digital ​​ ​​?",
+      "answer": "MTD for ITSA ​​ ​​ ​​ HMRC ​​ ​​. ​​ 6 ​​ 2026 £50,000 ​​; ​​ 2027 £30,000 ​​; ​​ 2028 £20,000 ​​. ​​ ​​."
+    },
+    "vat-registration": {
+      "question": "VAT ​​?",
+      "answer": "​​ £90,000 ​​ VAT ​​ (1 ​​ 2024 ​​). ​​ ​​ ​​ ​​."
+    },
+    "fixed-fees": {
+      "question": "​​ ​​?",
+      "answer": "​​ ​​, ​​ ​​ ​​. ​​ ​​ ​​. ​​, ​​ ​​."
+    },
+    "accounting-software": {
+      "question": "​​ ​​?",
+      "answer": "Xero, QuickBooks, FreeAgent ​​ Sage ​​. ​​ ​​, ​​ ​​ ​​."
+    },
+    "response-time": {
+      "question": "​​ ​​?",
+      "answer": "​​ ​​ ​​. ​​ ​​ ​​ ​​ WhatsApp ​​."
+    }
+  },
+  "contact": {
+    "eyebrow": "​​ ​​",
+    "headline": "​​ ​​ ​​",
+    "lead": "​​ ​​. ​​ ​​ ​​ ​​.",
+    "form": {
+      "name": "​​ ​​",
+      "namePlaceholder": "​​ ​​",
+      "email": "​​ ​​",
+      "emailPlaceholder": "you@example.com",
+      "phone": "​​ ​​ (​​)",
+      "phonePlaceholder": "+94 77 000 0000",
+      "businessType": "​​ ​​",
+      "businessTypePlaceholder": "​​ ​​",
+      "services": "​​ ​​",
+      "turnover": "​​ ​​ (​​)",
+      "turnoverPlaceholder": "​​ ​​",
+      "contactMethod": "​​ ​​",
+      "preferredTime": "​​ ​​ (​​)",
+      "preferredTimePlaceholder": "​​ ​​",
+      "message": "​​ (​​)",
+      "messagePlaceholder": "​​ ​​...",
+      "consent": "​​ VG Don Services ​​ ​​ ​​, ​​ ​​ ​​.",
+      "submit": "​​ ​​",
+      "submitting": "​​...",
+      "successTitle": "​​ ​​!",
+      "successBody": "​​ — ​​ ​​ ​​.",
+      "errorTitle": "​​ ​​",
+      "errorBody": "​​, ​​ vgdonservices@gmail.com ​​",
+      "errorSummaryTitle": "​​ ​​:",
+      "turnstileLabel": "​​ ​​"
+    },
+    "businessTypes": {
+      "freelancer-sole-trader": "​​ / ​​",
+      "limited-company": "​​",
+      "landlord": "​​",
+      "partnership": "​​",
+      "startup": "Startup",
+      "other": "​​"
+    },
+    "services": {
+      "bookkeeping-vat": "​​ & VAT",
+      "year-end-accounts": "​​",
+      "self-assessment": "​​",
+      "startup-advice": "​​",
+      "tax-advice": "​​",
+      "not-sure": "​​ — ​​"
+    },
+    "turnoverBands": {
+      "under-30k": "£30,000 ​​",
+      "30k-90k": "£30,000 – £90,000",
+      "90k-250k": "£90,000 – £250,000",
+      "250k-plus": "£250,000+",
+      "prefer-not-to-say": "​​"
+    },
+    "contactMethods": {
+      "email": "​​",
+      "phone": "​​",
+      "whatsapp": "WhatsApp"
+    },
+    "preferredTimes": {
+      "morning": "​​ (9​​–12​​)",
+      "afternoon": "​​ (12​​–5​​)",
+      "evening": "​​ (5​​–8​​)"
+    }
+  },
+  "footer": {
+    "tagline": "​​ · ලන්ඩනය",
+    "credentials": "ACA · BFP · ICAEW ​​",
+    "hours": "​​–​​ 9​​–6​​",
+    "email": "vgdonservices@gmail.com",
+    "phone": "+44 7460 855128",
+    "address": "ලන්ඩනය, UK",
+    "privacy": "​​ ​​",
+    "terms": "​​",
+    "copyright": "© {year} VG Don Services. ​​ ​​.",
+    "disclaimer": "VG Don Services ​​ Danuka Geekiyanage Don ​​. // NEEDS REVIEW"
+  },
+  "privacy": {
+    "title": "​​ ​​",
+    "lastUpdated": "​​: ​​ 2026"
+  },
+  "terms": {
+    "title": "​​",
+    "lastUpdated": "​​: ​​ 2026"
+  },
+  "recommender": {
+    "placeholder": "​​ 2 — ​​ // NEEDS REVIEW"
+  }
+}

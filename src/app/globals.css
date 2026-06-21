@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+/* ─── Design-token bridge: CSS custom props → Tailwind v4 theme ─── */
+@theme {
+  --color-brand: var(--vg-brand);
+  --color-brand-press: var(--vg-brand-press);
+  --color-accent: var(--vg-accent);
+  --color-bg: var(--vg-bg);
+  --color-surface: var(--vg-surface);
+  --color-surface-2: var(--vg-surface-2);
+  --color-ink: var(--vg-ink);
+  --color-ink-soft: var(--vg-ink-soft);
+  --color-muted: var(--vg-muted);
+  --color-line: var(--vg-line);
+  --color-on-brand: var(--vg-on-brand);
+  --color-on-accent: var(--vg-on-accent);
+  --color-cta-bg: var(--vg-cta-bg);
+  --color-cta-ink: var(--vg-cta-ink);
+  --color-hero-bg: var(--vg-hero-bg);
+  --color-hero-ink: var(--vg-hero-ink);
+  --color-bar-bg: var(--vg-bar-bg);
+  --color-bar-ink: var(--vg-bar-ink);
+  --color-success: #16a34a;
+  --color-error: #dc2626;
+
+  --font-display: var(--vg-font-display);
+  --font-body: var(--vg-font-body);
+
+  --radius-card: var(--vg-radius);
+  --radius-sm: var(--vg-radius-sm);
+  --radius-btn: var(--vg-radius-btn);
+
+  --shadow-card: var(--vg-shadow);
+  --shadow-sm: var(--vg-shadow-sm);
+}
+
+/* ─── Base ─── */
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background-color: var(--vg-bg);
+  color: var(--vg-ink);
+  font-family: var(--vg-font-body, system-ui, sans-serif);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ─── Sinhala locale override ─── */
+[lang="si"] body {
+  font-family: var(--font-sinhala, var(--vg-font-body), sans-serif);
+}
+[lang="si"] h1, [lang="si"] h2, [lang="si"] h3 {
+  font-family: var(--font-sinhala, sans-serif);
+}
+
+/* ─── Focus visible ─── */
+:focus-visible {
+  outline: 2px solid var(--vg-brand);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* ─── Skip link ─── */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  padding: 0.5rem 1rem;
+  background: var(--vg-brand);
+  color: var(--vg-on-brand);
+  border-radius: var(--vg-radius-btn);
+  font-weight: 600;
+  z-index: 9999;
+  transition: top 0.1s;
+}
+.skip-link:focus {
+  top: 1rem;
+}
+
+/* ─── Reduced motion ─── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

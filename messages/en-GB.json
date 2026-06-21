@@ -1,0 +1,229 @@
+{
+  "nav": {
+    "services": "Services",
+    "about": "About",
+    "whyMe": "Why Me",
+    "howItWorks": "How It Works",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "getQuote": "Get a free quote",
+    "menu": "Menu",
+    "close": "Close menu"
+  },
+  "topbar": {
+    "text": "Fixed-fee accounting for freelancers & small businesses",
+    "cta": "Get in touch"
+  },
+  "hero": {
+    "eyebrow": "London Chartered Accountant",
+    "headline1": "Chartered expertise.",
+    "headline2": "Freelance rates.",
+    "lead": "Friendly, fixed-fee accounting for freelancers, sole traders and small businesses across London — with a real person who actually picks up the phone.",
+    "cta1": "Get a free quote →",
+    "cta2": "See services",
+    "chip1": "Chartered Accountant",
+    "chip2": "Fixed pricing",
+    "chip3": "Local & personal",
+    "trust1": "Self-Assessment filed ✓",
+    "trust2": "Fixed fee — no surprises"
+  },
+  "trustBar": {
+    "label": "Trusted tools & credentials",
+    "years": "10+ years' experience",
+    "aca": "ACA Qualified",
+    "icaew": "ICAEW Member",
+    "mtd": "MTD Ready"
+  },
+  "about": {
+    "eyebrow": "About Danuka",
+    "headline": "A Chartered Accountant who speaks plain English",
+    "body1": "I'm Danuka — a UK Chartered Accountant (ACA) with over a decade of experience helping freelancers, sole traders, landlords and small businesses take control of their finances.",
+    "body2": "I left the big firms because I wanted to give clients something they couldn't get there: a personal service, transparent fixed fees, and an accountant who actually picks up the phone. No juniors, no handoffs — just me.",
+    "body3": "Whether you need your self-assessment filed, your VAT sorted, or simply want to understand what Making Tax Digital means for your business — I'm here to help.",
+    "credentials": "ACA · BFP · ICAEW Member",
+    "location": "Based in London · Working UK-wide remotely",
+    "imageAlt": "Danuka Geekiyanage Don, Chartered Accountant"
+  },
+  "services": {
+    "eyebrow": "What I do",
+    "headline": "Services built for people like you",
+    "lead": "Plain-English accounting with fixed, transparent pricing — no hidden extras.",
+    "bookkeeping-vat": {
+      "title": "Bookkeeping & VAT",
+      "description": "MTD-ready VAT returns filed on time, every time. Accurate records you can rely on.",
+      "audience": "Sole traders & SMEs"
+    },
+    "year-end-accounts": {
+      "title": "Year-End Accounts",
+      "description": "Accurate accounts prepared and filed — Companies House and HMRC both handled, stress-free.",
+      "audience": "All businesses"
+    },
+    "self-assessment": {
+      "title": "Self-Assessment Returns",
+      "description": "Every allowance claimed, every deadline met. Filed correctly so you keep more of what you earn.",
+      "audience": "Freelancers & landlords"
+    },
+    "startup-advice": {
+      "title": "Business Startup Advice",
+      "description": "Set up correctly from day one. Structure, registration, and the right records from the start.",
+      "audience": "New founders"
+    },
+    "tax-advice": {
+      "title": "Tax Advice",
+      "description": "Proactive, practical advice to keep more of what you earn — legally and sustainably.",
+      "audience": "Anyone"
+    },
+    "not-sure": {
+      "title": "Not sure what you need?",
+      "description": "Tell me about your situation and I'll recommend the right mix of services for you — free, no obligation.",
+      "audience": "Free guidance"
+    }
+  },
+  "whyMe": {
+    "eyebrow": "Why choose me",
+    "headline": "The difference a personal accountant makes",
+    "pillar1Title": "Chartered expertise",
+    "pillar1Body": "ACA qualified and ICAEW member — the highest standard of UK accountancy training.",
+    "pillar2Title": "Fixed pricing",
+    "pillar2Body": "You know the cost before we start. No hourly billing, no surprise invoices.",
+    "pillar3Title": "Personal & local",
+    "pillar3Body": "Based in London, available UK-wide. You deal with me — not a junior or call centre.",
+    "pillar4Title": "Quick to respond",
+    "pillar4Body": "I aim to respond within one business day. Urgent? Call or WhatsApp me directly."
+  },
+  "process": {
+    "eyebrow": "How it works",
+    "headline": "Three simple steps to peace of mind",
+    "step1Title": "Get in touch",
+    "step1Body": "Book a free, no-obligation call or send a message. Tell me about your situation.",
+    "step2Title": "Get a clear fixed quote",
+    "step2Body": "I'll give you a transparent, all-inclusive price. No hourly rates, no hidden extras.",
+    "step3Title": "Relax — I handle the rest",
+    "step3Body": "I take care of everything, keep you informed, and make sure you never miss a deadline.",
+    "cta": "Start now — it's free"
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "headline": "Common questions, honest answers",
+    "self-assessment-cost": {
+      "question": "How much does a self-assessment return cost?",
+      "answer": "Self-assessment returns start from £250 for straightforward employment income plus one property or freelance source. The exact price depends on your income sources — I'll give you a fixed quote upfront before any work begins."
+    },
+    "outside-london": {
+      "question": "Do you work outside London?",
+      "answer": "Yes. I'm based in London and happy to meet clients in person in the city. For clients elsewhere in the UK, I work entirely remotely via video call, email, and cloud accounting software — with no difference in service quality."
+    },
+    "qualified-accountant": {
+      "question": "Are you a qualified accountant?",
+      "answer": "Yes. I'm a UK Chartered Accountant (ACA) and a member of the Institute of Chartered Accountants in England and Wales (ICAEW) — the gold standard of UK accountancy qualifications."
+    },
+    "making-tax-digital": {
+      "question": "What is Making Tax Digital and does it affect me?",
+      "answer": "Making Tax Digital for Income Tax Self-Assessment (MTD for ITSA) requires sole traders and landlords to keep digital records and submit quarterly updates to HMRC. It applies from 6 April 2026 if your income exceeds £50,000; April 2027 for over £30,000; April 2028 for over £20,000. I can get you fully prepared."
+    },
+    "vat-registration": {
+      "question": "When do I need to register for VAT?",
+      "answer": "You must register for VAT when your taxable turnover exceeds £90,000 in any rolling 12-month period (unchanged since 1 April 2024). You can also register voluntarily below this threshold, which can be beneficial in some cases. I can advise on whether voluntary registration makes sense for your business."
+    },
+    "fixed-fees": {
+      "question": "How do fixed fees work?",
+      "answer": "Before any work begins, I give you a clear, all-inclusive fixed price for the service you need. That price doesn't change unless your circumstances change significantly. No hourly billing, no surprise invoices at the end of the year."
+    },
+    "accounting-software": {
+      "question": "Which accounting software do you use?",
+      "answer": "I work with all major cloud platforms: Xero, QuickBooks, FreeAgent, and Sage. If you don't have software yet, I'll recommend the best fit for your business type and budget. All are MTD-compatible."
+    },
+    "response-time": {
+      "question": "How quickly do you respond?",
+      "answer": "I aim to respond to all enquiries within one business day. For existing clients with urgent questions, you can reach me directly by phone or WhatsApp and I'll do my best to help promptly."
+    }
+  },
+  "contact": {
+    "eyebrow": "Get in touch",
+    "headline": "Let's talk about your finances",
+    "lead": "Free, no-obligation consultation. I'll give you a clear fixed quote before any work begins.",
+    "form": {
+      "name": "Full name",
+      "namePlaceholder": "Your full name",
+      "email": "Email address",
+      "emailPlaceholder": "you@example.com",
+      "phone": "Phone number (optional)",
+      "phonePlaceholder": "+44 7700 000000",
+      "businessType": "Business type",
+      "businessTypePlaceholder": "Select your business type",
+      "services": "Services needed",
+      "turnover": "Annual turnover (optional)",
+      "turnoverPlaceholder": "Select a range",
+      "contactMethod": "Preferred contact method",
+      "preferredTime": "Best time to contact (optional)",
+      "preferredTimePlaceholder": "Select a time",
+      "message": "Message (optional)",
+      "messagePlaceholder": "Tell me a bit about your situation...",
+      "consent": "I consent to VG Don Services storing my details to respond to this enquiry, in accordance with the Privacy Policy.",
+      "submit": "Send enquiry",
+      "submitting": "Sending...",
+      "successTitle": "Enquiry sent!",
+      "successBody": "Thank you — I'll be in touch within one business day.",
+      "errorTitle": "Something went wrong",
+      "errorBody": "Please try again, or email me directly at vgdonservices@gmail.com",
+      "errorSummaryTitle": "Please fix the following errors:",
+      "turnstileLabel": "Security check"
+    },
+    "businessTypes": {
+      "freelancer-sole-trader": "Freelancer / Sole trader",
+      "limited-company": "Limited company",
+      "landlord": "Landlord",
+      "partnership": "Partnership",
+      "startup": "Startup",
+      "other": "Other"
+    },
+    "services": {
+      "bookkeeping-vat": "Bookkeeping & VAT",
+      "year-end-accounts": "Year-End Accounts",
+      "self-assessment": "Self-Assessment Returns",
+      "startup-advice": "Business Startup Advice",
+      "tax-advice": "Tax Advice",
+      "not-sure": "Not sure — I need guidance"
+    },
+    "turnoverBands": {
+      "under-30k": "Under £30,000",
+      "30k-90k": "£30,000 – £90,000",
+      "90k-250k": "£90,000 – £250,000",
+      "250k-plus": "£250,000+",
+      "prefer-not-to-say": "Prefer not to say"
+    },
+    "contactMethods": {
+      "email": "Email",
+      "phone": "Phone",
+      "whatsapp": "WhatsApp"
+    },
+    "preferredTimes": {
+      "morning": "Morning (9am–12pm)",
+      "afternoon": "Afternoon (12pm–5pm)",
+      "evening": "Evening (5pm–8pm)"
+    }
+  },
+  "footer": {
+    "tagline": "Chartered Accountant · London",
+    "credentials": "ACA · BFP · ICAEW Member",
+    "hours": "Mon–Fri 9am–6pm",
+    "email": "vgdonservices@gmail.com",
+    "phone": "+44 7460 855128",
+    "address": "London, United Kingdom",
+    "privacy": "Privacy Policy",
+    "terms": "Terms",
+    "copyright": "© {year} VG Don Services. All rights reserved.",
+    "disclaimer": "VG Don Services is the trading name of Danuka Geekiyanage Don, Chartered Accountant."
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "lastUpdated": "Last updated: June 2026"
+  },
+  "terms": {
+    "title": "Terms of Engagement",
+    "lastUpdated": "Last updated: June 2026"
+  },
+  "recommender": {
+    "placeholder": "Phase 2 — recommender content reserved"
+  }
+}

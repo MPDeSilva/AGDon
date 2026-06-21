@@ -1,0 +1,27 @@
+# VG Don Services — Accounting & Bookkeeping
+
+> VG Don Services is a London-based UK Chartered Accountancy practice run by Danuka Geekiyanage Don (ACA, BFP, ICAEW member), offering fixed-fee bookkeeping, VAT, year-end accounts, self-assessment tax returns, business startup advice and general tax advice for freelancers, sole traders, landlords and small businesses. Chartered Accountant expertise at freelance rates.
+
+## Core pages
+
+- [Home](https://vgdonservices.co.uk/en-GB/): Overview of services, credentials, and how to get a free quote.
+- [Services](https://vgdonservices.co.uk/en-GB/#services): Bookkeeping & VAT, Year-End Accounts, Self-Assessment, Business Startup Advice, Tax Advice.
+- [About](https://vgdonservices.co.uk/en-GB/#about): About Danuka, qualifications and the practice's approach.
+- [FAQ](https://vgdonservices.co.uk/en-GB/#faq): Pricing, Making Tax Digital, qualifications, service area.
+- [Contact](https://vgdonservices.co.uk/en-GB/#contact): Get a free, no-obligation fixed-fee quote.
+
+## Key facts
+
+- Founder: Danuka Geekiyanage Don
+- Qualifications: ACA (Associate Chartered Accountant), BFP, ICAEW member
+- Location: London, UK (in-person London; remote UK-wide)
+- Services: Bookkeeping & VAT, Year-End Accounts, Self-Assessment Returns, Business Startup Advice, Tax Advice
+- Pricing: Fixed fee, agreed upfront, no hourly billing
+- Contact: vgdonservices@gmail.com | +44 7460 855128
+- VAT registration threshold (UK): £90,000 (unchanged since 1 April 2024)
+- MTD for ITSA: 6 April 2026 (>£50k) | April 2027 (>£30k) | April 2028 (>£20k)
+
+## Optional
+
+- [Privacy Policy](https://vgdonservices.co.uk/en-GB/privacy)
+- [Terms of Engagement](https://vgdonservices.co.uk/en-GB/terms)
