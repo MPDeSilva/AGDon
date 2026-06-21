@@ -86,7 +86,7 @@ export function SiteFooter() {
           className="pt-6 text-sm opacity-60 text-center"
           style={{ borderTop: '1px solid rgba(255,255,255,0.15)' }}
         >
-          {t('copyright').replace('{year}', String(year))}
+          {t('copyright', { year })}
         </div>
       </div>
     </footer>
