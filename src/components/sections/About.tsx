@@ -1,4 +1,5 @@
 import { useTranslations } from 'next-intl'
+import { PersonPlaceholder } from '@/components/ui/PersonPlaceholder'
 
 export function About() {
   const t = useTranslations('about')
@@ -12,41 +13,67 @@ export function About() {
     >
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Image placeholder */}
+          {/* Photo area */}
           <div className="relative order-2 lg:order-1">
-            <div
-              className="relative z-10 w-full max-w-sm mx-auto lg:mx-0 aspect-[3/4] flex items-center justify-center"
-              style={{
-                backgroundColor: 'var(--vg-surface-2)',
-                borderRadius: 'var(--vg-frame-radius)',
-              }}
-            >
-              {/* Placeholder initials avatar */}
-              <div className="text-center">
-                <div
-                  className="w-24 h-24 mx-auto rounded-full flex items-center justify-center text-3xl font-bold mb-3"
-                  style={{
-                    backgroundColor: 'var(--vg-frame-back)',
-                    color: 'var(--vg-on-brand)',
-                    fontFamily: 'var(--vg-font-display)',
-                  }}
-                >
-                  DG
-                </div>
-                <p className="text-sm" style={{ color: 'var(--vg-muted)' }}>
-                  {t('imageAlt')}
-                </p>
-              </div>
-            </div>
-            {/* Decorative block behind image */}
+            {/* Decorative block behind */}
             <div
               aria-hidden="true"
-              className="absolute top-6 -left-6 w-full max-w-sm mx-auto lg:mx-0 aspect-[3/4] -z-0"
+              className="absolute top-6 -left-4 lg:-left-8 w-full max-w-sm aspect-[3/4] z-0"
               style={{
-                backgroundColor: 'var(--vg-surface-2)',
+                backgroundColor: 'var(--vg-frame-back)',
+                opacity: 0.18,
                 borderRadius: 'var(--vg-frame-radius)',
               }}
             />
+            {/* Accent line */}
+            <div
+              aria-hidden="true"
+              className="absolute -bottom-4 -right-4 w-24 h-24 z-0"
+              style={{
+                background: 'var(--vg-accent)',
+                opacity: 0.15,
+                borderRadius: '50%',
+              }}
+            />
+            {/* Main image frame */}
+            <div
+              className="relative z-10 w-full max-w-sm mx-auto lg:mx-0 aspect-[3/4] overflow-hidden"
+              style={{ borderRadius: 'var(--vg-frame-radius)' }}
+              role="img"
+              aria-label={t('imageAlt')}
+            >
+              <PersonPlaceholder />
+            </div>
+
+            {/* Floating credentials badge */}
+            <div
+              className="absolute -bottom-5 -right-2 lg:-right-8 z-20 px-4 py-3 flex items-center gap-3"
+              style={{
+                backgroundColor: 'var(--vg-surface)',
+                borderRadius: 'var(--vg-radius)',
+                boxShadow: 'var(--vg-shadow)',
+                border: '1px solid var(--vg-line)',
+              }}
+            >
+              <div
+                className="w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0"
+                style={{
+                  backgroundColor: 'var(--vg-brand)',
+                  color: 'var(--vg-on-brand)',
+                  fontFamily: 'var(--vg-font-display)',
+                }}
+              >
+                ACA
+              </div>
+              <div>
+                <p className="text-xs font-semibold leading-tight" style={{ color: 'var(--vg-ink)' }}>
+                  ICAEW Member
+                </p>
+                <p className="text-xs leading-tight" style={{ color: 'var(--vg-muted)' }}>
+                  Chartered Accountant
+                </p>
+              </div>
+            </div>
           </div>
 
           {/* Content */}
