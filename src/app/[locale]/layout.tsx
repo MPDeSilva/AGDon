@@ -15,6 +15,7 @@ import {
 import { locales } from '@/i18n/config'
 import { themes, activeTheme } from '@/lib/themes'
 import { buildMetadata, accountingServiceSchema } from '@/lib/seo'
+import { ThemeProvider } from '@/components/ui/ThemeProvider'
 import '../globals.css'
 
 const inter = Inter({
@@ -110,17 +111,27 @@ export default async function LocaleLayout({
     plusJakartaSans.variable,
   ].join(' ')
 
-  // Inline theme tokens as a CSS custom properties block
+  // Inline theme tokens as a CSS custom properties block (server default)
   const tokensCss = Object.entries(theme.tokens)
     .map(([k, v]) => `${k}:${v}`)
     .join(';')
+
+  // All theme tokens serialised for the FOUC-prevention script
+  const allTokensJson = JSON.stringify(
+    Object.fromEntries(
+      Object.entries(themes).map(([k, v]) => [k, v.tokens])
+    )
+  )
 
   const jsonLd = accountingServiceSchema(locale)
 
   return (
     <html lang={locale} className={fontVars} suppressHydrationWarning>
       <head>
+        {/* Server-side default theme — overridden by ThemeProvider on hydration */}
         <style dangerouslySetInnerHTML={{ __html: `:root{${tokensCss}}` }} />
+        {/* Apply saved theme before first paint to prevent flash */}
+        <script dangerouslySetInnerHTML={{ __html: `(function(){try{var k=localStorage.getItem('vg-theme');var t=${allTokensJson};if(k&&t[k]){var r=document.documentElement;Object.entries(t[k]).forEach(function(e){r.style.setProperty(e[0],e[1])})}}catch(e){}})()` }} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -131,7 +142,9 @@ export default async function LocaleLayout({
           Skip to main content
         </a>
         <NextIntlClientProvider messages={messages} locale={locale}>
-          {children}
+          <ThemeProvider>
+            {children}
+          </ThemeProvider>
         </NextIntlClientProvider>
       </body>
     </html>

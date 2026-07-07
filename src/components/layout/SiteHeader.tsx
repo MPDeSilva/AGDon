@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
 import { useTranslations } from 'next-intl'
 import { LangSwitcher } from './LangSwitcher'
+import { ThemeSwitcher } from '@/components/ui/ThemeSwitcher'
 
 const NAV_ITEMS = [
   { key: 'services', href: '#services' },
@@ -95,6 +96,7 @@ export function SiteHeader() {
 
         {/* Right actions */}
         <div className="flex items-center gap-3">
+          <ThemeSwitcher />
           <LangSwitcher />
           <a
             href="#contact"
@@ -165,6 +167,9 @@ export function SiteHeader() {
           >
             {t('getQuote')}
           </a>
+          <div className="mt-2">
+            <ThemeSwitcher />
+          </div>
         </div>
       )}
     </header>
