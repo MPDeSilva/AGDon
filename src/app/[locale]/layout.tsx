@@ -8,6 +8,9 @@ import {
   Crimson_Pro,
   Libre_Baskerville,
   Noto_Sans_Sinhala,
+  Space_Grotesk,
+  Archivo,
+  Plus_Jakarta_Sans,
 } from 'next/font/google'
 import { locales } from '@/i18n/config'
 import { themes, activeTheme } from '@/lib/themes'
@@ -46,6 +49,27 @@ const notoSansSinhala = Noto_Sans_Sinhala({
   display: 'swap',
 })
 
+const spaceGrotesk = Space_Grotesk({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-space-grotesk',
+  display: 'swap',
+})
+
+const archivo = Archivo({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700', '800'],
+  variable: '--font-archivo',
+  display: 'swap',
+})
+
+const plusJakartaSans = Plus_Jakarta_Sans({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700', '800'],
+  variable: '--font-plus-jakarta-sans',
+  display: 'swap',
+})
+
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }))
 }
@@ -81,6 +105,9 @@ export default async function LocaleLayout({
     crimsonPro.variable,
     libreBaskerville.variable,
     notoSansSinhala.variable,
+    spaceGrotesk.variable,
+    archivo.variable,
+    plusJakartaSans.variable,
   ].join(' ')
 
   // Inline theme tokens as a CSS custom properties block

@@ -1,4 +1,7 @@
+'use client'
+
 import { useTranslations } from 'next-intl'
+import { motion } from 'motion/react'
 import { services } from '@/lib/content'
 
 export function Services() {
@@ -40,7 +43,7 @@ export function Services() {
           {services.map((service, i) => {
             const isLast = i === services.length - 1
             return (
-              <article
+              <motion.article
                 key={service.id}
                 className="relative p-6 flex flex-col gap-4 transition-shadow hover:shadow-lg"
                 style={{
@@ -49,6 +52,11 @@ export function Services() {
                   border: `1px solid var(--vg-line)`,
                   boxShadow: 'var(--vg-shadow-sm)',
                 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-80px' }}
+                transition={{ duration: 0.5, delay: i * 0.06 }}
+                whileHover={{ y: -6 }}
               >
                 <span className="text-3xl" aria-hidden="true">{service.icon}</span>
                 <div>
@@ -87,7 +95,7 @@ export function Services() {
                     Get free guidance →
                   </a>
                 )}
-              </article>
+              </motion.article>
             )
           })}
         </div>

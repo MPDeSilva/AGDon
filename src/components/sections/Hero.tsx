@@ -1,5 +1,14 @@
+'use client'
+
 import { useTranslations } from 'next-intl'
+import { motion } from 'motion/react'
 import { HeroVisual } from '@/components/ui/HeroVisual'
+
+const fadeUp = (delay: number) => ({
+  initial: { opacity: 0, y: 20 },
+  animate: { opacity: 1, y: 0 },
+  transition: { duration: 0.6, delay },
+})
 
 export function Hero() {
   const t = useTranslations('hero')
@@ -26,7 +35,7 @@ export function Hero() {
           {/* ── Left: copy ── */}
           <div>
             {/* Eyebrow */}
-            <div className="mb-6 inline-flex items-center gap-2">
+            <motion.div className="mb-6 inline-flex items-center gap-2" {...fadeUp(0)}>
               <span
                 className="text-xs font-semibold uppercase tracking-widest px-3 py-1"
                 style={{
@@ -37,28 +46,32 @@ export function Hero() {
               >
                 {t('eyebrow')}
               </span>
-            </div>
+            </motion.div>
 
             {/* Headline */}
-            <h1
+            <motion.h1
               className="text-5xl sm:text-6xl lg:text-6xl xl:text-7xl leading-tight mb-6"
               style={{
                 fontFamily: 'var(--vg-font-display)',
                 fontWeight: 'var(--vg-h1-weight, 600)',
                 letterSpacing: 'var(--vg-display-spacing)',
               }}
+              {...fadeUp(0.08)}
             >
               {t('headline1')}
               <br />
               <span style={{ color: 'var(--vg-hero-accent, var(--vg-accent))' }}>
                 {t('headline2')}
               </span>
-            </h1>
+            </motion.h1>
 
             {/* Lead */}
-            <p className="text-lg sm:text-xl leading-relaxed mb-8 opacity-90 max-w-xl">
+            <motion.p
+              className="text-lg sm:text-xl leading-relaxed mb-8 opacity-90 max-w-xl"
+              {...fadeUp(0.16)}
+            >
               {t('lead')}
-            </p>
+            </motion.p>
 
             {/* Chips */}
             <div className="flex flex-wrap gap-2 mb-8">
@@ -78,8 +91,8 @@ export function Hero() {
             </div>
 
             {/* CTAs */}
-            <div className="flex flex-wrap gap-4 mb-10">
-              <a
+            <motion.div className="flex flex-wrap gap-4 mb-10" {...fadeUp(0.24)}>
+              <motion.a
                 href="#contact"
                 className="inline-flex items-center px-6 py-3 text-base font-semibold transition-opacity hover:opacity-90"
                 style={{
@@ -87,10 +100,12 @@ export function Hero() {
                   color: 'var(--vg-cta-ink)',
                   borderRadius: 'var(--vg-radius-btn)',
                 }}
+                whileHover={{ y: -3 }}
+                whileTap={{ y: 0 }}
               >
                 {t('cta1')}
-              </a>
-              <a
+              </motion.a>
+              <motion.a
                 href="#services"
                 className="inline-flex items-center px-6 py-3 text-base font-semibold transition-all hover:opacity-80"
                 style={{
@@ -99,10 +114,12 @@ export function Hero() {
                   borderRadius: 'var(--vg-radius-btn)',
                   opacity: 0.85,
                 }}
+                whileHover={{ y: -3 }}
+                whileTap={{ y: 0 }}
               >
                 {t('cta2')}
-              </a>
-            </div>
+              </motion.a>
+            </motion.div>
 
             {/* Trust cards */}
             <div className="flex flex-wrap gap-3">
