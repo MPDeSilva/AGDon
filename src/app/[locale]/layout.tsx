@@ -125,7 +125,6 @@ export default async function LocaleLayout({
   }
 
   const messages = await getMessages()
-  const theme = themes[activeTheme]
 
   const fontVars = [
     inter.variable,
@@ -141,31 +140,33 @@ export default async function LocaleLayout({
     newsreader.variable,
   ].join(' ')
 
-  // Inline theme tokens as a CSS custom properties block (server default)
-  const tokensCss = Object.entries(theme.tokens)
+  // CSS for all themes: default tokens on :root, each other theme via [data-theme] selector.
+  // This lets the tiny public/theme-init.js set data-theme= on <html> without any inline script.
+  const defaultTokensCss = Object.entries(themes[activeTheme].tokens)
     .map(([k, v]) => `${k}:${v}`)
     .join(';')
 
-  // All theme tokens serialised for the FOUC-prevention script
-  const allTokensJson = JSON.stringify(
-    Object.fromEntries(
-      Object.entries(themes).map(([k, v]) => [k, v.tokens])
+  const allThemesCss = Object.entries(themes)
+    .filter(([key]) => key !== activeTheme)
+    .map(
+      ([key, { tokens }]) =>
+        `[data-theme="${key}"]{${Object.entries(tokens)
+          .map(([k, v]) => `${k}:${v}`)
+          .join(';')}}`
     )
-  )
+    .join('')
+
+  const themeCss = `:root{${defaultTokensCss}}${allThemesCss}`
 
   const jsonLd = accountingServiceSchema(locale)
 
   return (
     <html lang={locale} className={fontVars} suppressHydrationWarning>
       <head>
-        {/* Server-side default theme — overridden by ThemeProvider on hydration */}
-        <style dangerouslySetInnerHTML={{ __html: `:root{${tokensCss}}` }} />
-        {/* Apply saved theme before first paint to prevent flash */}
-        <Script
-          id="vg-theme-init"
-          strategy="beforeInteractive"
-          dangerouslySetInnerHTML={{ __html: `(function(){try{var k=localStorage.getItem('vg-theme');var t=${allTokensJson};if(k&&t[k]){var r=document.documentElement;Object.entries(t[k]).forEach(function(e){r.style.setProperty(e[0],e[1])})}}catch(e){}})()` }}
-        />
+        {/* All theme tokens — default on :root, others via [data-theme="key"] selector */}
+        <style dangerouslySetInnerHTML={{ __html: themeCss }} />
+        {/* Reads localStorage and sets data-theme on <html> before first paint — no inline script */}
+        <Script id="vg-theme-init" strategy="beforeInteractive" src="/theme-init.js" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

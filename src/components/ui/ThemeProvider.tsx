@@ -13,9 +13,8 @@ export const ThemeContext = createContext<ThemeCtx>({
   setTheme: () => {},
 })
 
-export function applyTheme(key: ThemeKey) {
-  const root = document.documentElement
-  Object.entries(themes[key].tokens).forEach(([k, v]) => root.style.setProperty(k, v))
+function applyTheme(key: ThemeKey) {
+  document.documentElement.setAttribute('data-theme', key)
 }
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
@@ -24,10 +23,8 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     const saved = localStorage.getItem(STORAGE_KEY) as ThemeKey | null
     const initial = saved && themes[saved] ? saved : activeTheme
-    if (initial !== activeTheme) {
-      setThemeState(initial)
-      applyTheme(initial)
-    }
+    setThemeState(initial)
+    applyTheme(initial)
   }, [])
 
   function setTheme(key: ThemeKey) {
