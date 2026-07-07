@@ -1,14 +1,13 @@
 import { TopBar } from '@/components/layout/TopBar'
 import { SiteHeader } from '@/components/layout/SiteHeader'
-import { Hero } from '@/components/sections/Hero'
 import { TrustBar } from '@/components/sections/TrustBar'
 import { About } from '@/components/sections/About'
-import { Services } from '@/components/sections/Services'
 import { WhyMe } from '@/components/sections/WhyMe'
 import { Process } from '@/components/sections/Process'
 import { Faq } from '@/components/sections/Faq'
 import { ContactSection } from '@/components/sections/ContactSection'
 import { SiteFooter } from '@/components/layout/SiteFooter'
+import { HeroRenderer, ServicesRenderer } from '@/components/designs/DesignRenderer'
 
 export default function HomePage() {
   return (
@@ -16,10 +15,10 @@ export default function HomePage() {
       <TopBar />
       <SiteHeader />
       <main id="main-content">
-        <Hero />
+        <HeroRenderer />
         <TrustBar />
         <About />
-        <Services />
+        <ServicesRenderer />
         <WhyMe />
         <Process />
         <Faq />

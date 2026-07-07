@@ -11,6 +11,9 @@ import {
   Space_Grotesk,
   Archivo,
   Plus_Jakarta_Sans,
+  Bricolage_Grotesque,
+  Cormorant_Garamond,
+  Newsreader,
 } from 'next/font/google'
 import { locales } from '@/i18n/config'
 import { themes, activeTheme } from '@/lib/themes'
@@ -72,6 +75,29 @@ const plusJakartaSans = Plus_Jakarta_Sans({
   display: 'swap',
 })
 
+const bricolageGrotesque = Bricolage_Grotesque({
+  subsets: ['latin'],
+  weight: ['400', '600', '700', '800'],
+  variable: '--font-bricolage-grotesque',
+  display: 'swap',
+})
+
+const cormorantGaramond = Cormorant_Garamond({
+  subsets: ['latin'],
+  weight: ['400', '500', '600'],
+  style: ['normal', 'italic'],
+  variable: '--font-cormorant-garamond',
+  display: 'swap',
+})
+
+const newsreader = Newsreader({
+  subsets: ['latin'],
+  weight: ['300', '400', '500'],
+  style: ['normal', 'italic'],
+  variable: '--font-newsreader',
+  display: 'swap',
+})
+
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }))
 }
@@ -110,6 +136,9 @@ export default async function LocaleLayout({
     spaceGrotesk.variable,
     archivo.variable,
     plusJakartaSans.variable,
+    bricolageGrotesque.variable,
+    cormorantGaramond.variable,
+    newsreader.variable,
   ].join(' ')
 
   // Inline theme tokens as a CSS custom properties block (server default)
